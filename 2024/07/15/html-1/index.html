@@ -1,0 +1,415 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>html-1 | memorygo的博客</title><meta name="author" content="memorygo"><meta name="copyright" content="memorygo"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="html5语法基础一 超文本标记语言  1. 常用标签 段落标签&lt;p&gt; &lt;&#x2F;p&gt;  换行标签&lt;br &#x2F;&gt;  强制换行，段落不变   文本格式化标签  加粗   &lt;strong&gt; &lt;&#x2F;strong&gt; &lt;b&gt; &lt;&#x2F;b&gt;   倾斜   &lt;em&gt; &lt;&#x2F;em&gt; &lt;i&gt; &lt;&#x2F;i&gt;">
+<meta property="og:type" content="article">
+<meta property="og:title" content="html-1">
+<meta property="og:url" content="http://memorygo.github.io/2024/07/15/html-1/index.html">
+<meta property="og:site_name" content="memorygo的博客">
+<meta property="og:description" content="html5语法基础一 超文本标记语言  1. 常用标签 段落标签&lt;p&gt; &lt;&#x2F;p&gt;  换行标签&lt;br &#x2F;&gt;  强制换行，段落不变   文本格式化标签  加粗   &lt;strong&gt; &lt;&#x2F;strong&gt; &lt;b&gt; &lt;&#x2F;b&gt;   倾斜   &lt;em&gt; &lt;&#x2F;em&gt; &lt;i&gt; &lt;&#x2F;i&gt;">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png">
+<meta property="article:published_time" content="2024-07-15T13:11:14.000Z">
+<meta property="article:modified_time" content="2024-07-15T13:11:57.146Z">
+<meta property="article:author" content="memorygo">
+<meta property="article:tag" content="blog,博客">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://memorygo.github.io/2024/07/15/html-1/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=4.14.0-b3"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.1/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.35/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>(()=>{
+      const saveToLocal = {
+        set: (key, value, ttl) => {
+          if (ttl === 0) return
+          const now = Date.now()
+          const expiry = now + ttl * 86400000
+          const item = {
+            value,
+            expiry
+          }
+          localStorage.setItem(key, JSON.stringify(item))
+        },
+      
+        get: key => {
+          const itemStr = localStorage.getItem(key)
+      
+          if (!itemStr) {
+            return undefined
+          }
+          const item = JSON.parse(itemStr)
+          const now = Date.now()
+      
+          if (now > item.expiry) {
+            localStorage.removeItem(key)
+            return undefined
+          }
+          return item.value
+        }
+      }
+      
+      window.btf = {
+        saveToLocal: saveToLocal,
+        getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+          const script = document.createElement('script')
+          script.src = url
+          script.async = true
+          script.onerror = reject
+          script.onload = script.onreadystatechange = function() {
+            const loadState = this.readyState
+            if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+            script.onload = script.onreadystatechange = null
+            resolve()
+          }
+
+          Object.keys(attr).forEach(key => {
+            script.setAttribute(key, attr[key])
+          })
+
+          document.head.appendChild(script)
+        }),
+
+        getCSS: (url, id = false) => new Promise((resolve, reject) => {
+          const link = document.createElement('link')
+          link.rel = 'stylesheet'
+          link.href = url
+          if (id) link.id = id
+          link.onerror = reject
+          link.onload = link.onreadystatechange = function() {
+            const loadState = this.readyState
+            if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+            link.onload = link.onreadystatechange = null
+            resolve()
+          }
+          document.head.appendChild(link)
+        }),
+
+        addGlobalFn: (key, fn, name = false, parent = window) => {
+          const pjaxEnable = false
+          if (!pjaxEnable && key.startsWith('pjax')) return
+
+          const globalFn = parent.globalFn || {}
+          const keyObj = globalFn[key] || {}
+    
+          if (name && keyObj[name]) return
+    
+          name = name || Object.keys(keyObj).length
+          keyObj[name] = fn
+          globalFn[key] = keyObj
+          parent.globalFn = globalFn
+        }
+      }
+    
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+      
+      const t = saveToLocal.get('theme')
+    
+        if (t === 'dark') activateDarkMode()
+        else if (t === 'light') activateLightMode()
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+      const detectApple = () => {
+        if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+          document.documentElement.classList.add('apple')
+        }
+      }
+      detectApple()
+    })()</script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":true,"highlightMacStyle":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.11.1/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'html-1',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2024-07-15 21:11:57'
+}</script><meta name="generator" content="Hexo 7.3.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">3</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div><hr class="custom-hr"/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives"><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags"><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories"><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/tags/%E6%97%85%E8%A1%8C/"><span> 旅行</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header"><nav id="nav"><span id="blog-info"><a href="/" title="memorygo的博客"><span class="site-name">memorygo的博客</span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives"><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags"><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories"><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/tags/%E6%97%85%E8%A1%8C/"><span> 旅行</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="post-info"><h1 class="post-title">html-1</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2024-07-15T13:11:14.000Z" title="发表于 2024-07-15 21:11:14">2024-07-15</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2024-07-15T13:11:57.146Z" title="更新于 2024-07-15 21:11:57">2024-07-15</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="html-1"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="html5语法基础一"><a href="#html5语法基础一" class="headerlink" title="html5语法基础一"></a>html5语法基础一</h1><blockquote>
+<p><code>超文本标记语言</code></p>
+</blockquote>
+<h2 id="1-常用标签"><a href="#1-常用标签" class="headerlink" title="1. 常用标签"></a>1. 常用标签</h2><ol>
+<li><p><strong>段落标签</strong><br><code>&lt;p&gt; &lt;/p&gt;</code></p>
+</li>
+<li><p><strong>换行标签</strong><br><code>&lt;br /&gt;</code></p>
+<blockquote>
+<p>强制换行，段落不变</p>
+</blockquote>
+</li>
+<li><p><strong>文本格式化标签</strong></p>
+<ol>
+<li>加粗</li>
+</ol>
+<ul>
+<li><code>&lt;strong&gt; &lt;/strong&gt;</code></li>
+<li><code>&lt;b&gt; &lt;/b&gt;</code></li>
+</ul>
+<ol>
+<li>倾斜</li>
+</ol>
+<ul>
+<li><code>&lt;em&gt; &lt;/em&gt;</code></li>
+<li><code>&lt;i&gt; &lt;/i&gt;</code></li>
+</ul>
+<ol>
+<li>删除线</li>
+</ol>
+<ul>
+<li><code>&lt;del&gt;&lt;/del&gt;</code></li>
+<li><code>&lt;s&gt;&lt;/s&gt;</code></li>
+</ul>
+<ol>
+<li>下划线</li>
+</ol>
+<ul>
+<li><code>&lt;ins&gt;&lt;/ins&gt;</code></li>
+<li><code>&lt;u&gt;&lt;\u&gt;</code></li>
+</ul>
+</li>
+<li><p><strong>盒子标签</strong></p>
+<blockquote>
+<p>用于布局</p>
+<blockquote>
+<p>无语意</p>
+</blockquote>
+</blockquote>
+<p><code>&lt;div&gt; &lt;/div&gt;      （大盒子）独占一行</code><br><code>&lt;span&gt; &lt;/span&gt;    （小盒子）一行可以有多个span</code><br>div,即division，表示分割，分区<br>span,表示跨度，跨距</p>
+</li>
+<li><p><strong>图像标签</strong></p>
+<ol>
+<li><code>&lt;img&gt;</code></li>
+</ol>
+<p><code>&lt;img src=&quot;url&quot;/&gt;  单标签，src是必须属性，为图像路径和文件名</code></p>
+<blockquote>
+<p>可以直接显现图片<br>2. 其它属性</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th align="left">属性</th>
+<th align="left">属性值</th>
+<th align="left">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">src</td>
+<td align="left">图片路径</td>
+<td align="left">必须属性</td>
+</tr>
+<tr>
+<td align="left">alt</td>
+<td align="left">文本</td>
+<td align="left">图像不能显示时，替换为文本</td>
+</tr>
+<tr>
+<td align="left">title</td>
+<td align="left">文本</td>
+<td align="left">提示文本 鼠标放在图像上，提示的文本</td>
+</tr>
+<tr>
+<td align="left">width</td>
+<td align="left">像素</td>
+<td align="left">设置图像宽度<a href="%E5%AE%BD%E9%AB%98%E8%8B%A5%E5%8F%AA%E4%BF%AE%E6%94%B9%E4%B8%80%E4%B8%AA%EF%BC%8C%E5%8F%A6%E4%B8%80%E4%B8%AA%E4%BC%9A%E7%AD%89%E6%AF%94%E4%BE%8B%E7%BC%A9%E6%94%BE">^1</a></td>
+</tr>
+<tr>
+<td align="left">height</td>
+<td align="left">像素</td>
+<td align="left">设置图像高度</td>
+</tr>
+<tr>
+<td align="left">border</td>
+<td align="left">像素</td>
+<td align="left">设置边框粗细</td>
+</tr>
+</tbody></table>
+</li>
+<li><p><strong>超链接标签</strong></p>
+<ul>
+<li><code>&lt;a&gt; &lt;/a&gt;</code></li>
+</ul>
+<ol>
+<li>语法格式</li>
+</ol>
+<p><code>&lt;a href=&quot;跳转目标&quot; target=&quot;目标窗口的弹出方式&quot;&gt; 文本或图像 &lt;/a&gt;</code><br>     |属性|作用|<br>     |:—|:—|<br>     |href|必须属性，跳转的url地址|<br>     |target|链接打开方式，_self为当前页面打开<a href="%E9%BB%98%E8%AE%A4%E4%B8%BA_self">^2</a>，__blank为新窗口打开|<br> 2. 链接分类<br>    1.  外部链接 <code>href=&quot;https://www.baidu.com&quot;</code><br>    2.  内部链接 <code>href=&quot;index.html&quot;</code><br>    3.  空链接   <code>href=&quot;#&quot;</code><br>    4.  下载链接 <code>href=&quot;xxx.zip&quot; 或 href=&quot;xxx.exe&quot;</code><br>    5.  网页元素链接<br>     &gt; 除了文本还可以给图像，视频，音频，表格等添加超链接（即在原本标签上再套一层a标签）<br>    6. 锚点链接<br>      <code>快速定位页面中的某个位置</code><br>      - <code>&lt;a href=&quot;#two&quot;&gt; &lt;/a&gt;</code><br>      - <code>&lt;h3 id=&quot;two&quot;&gt; &lt;/a&gt;</code></p>
+</li>
+<li><p><strong>注释标签</strong><br><code>ctrl + /</code></p>
+</li>
+<li><p><strong>特殊字符</strong></p>
+<table>
+<thead>
+<tr>
+<th align="left">特殊字符</th>
+<th align="left">描述</th>
+<th align="left">代码</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">&nbsp;</td>
+<td align="left">空格符</td>
+<td align="left"><code>&amp;nbsp;</code></td>
+</tr>
+<tr>
+<td align="left">&lt;</td>
+<td align="left">小于号</td>
+<td align="left"><code>&amp;lt;</code></td>
+</tr>
+<tr>
+<td align="left">&gt;</td>
+<td align="left">大于号</td>
+<td align="left"><code>&amp;gt;</code></td>
+</tr>
+<tr>
+<td align="left">&amp;</td>
+<td align="left">和号</td>
+<td align="left"><code>&amp;amp;</code></td>
+</tr>
+<tr>
+<td align="left">&yen;</td>
+<td align="left">人民币</td>
+<td align="left"><code>&amp;yen;</code></td>
+</tr>
+<tr>
+<td align="left">&copy;</td>
+<td align="left">版权</td>
+<td align="left"><code>&amp;copy;</code></td>
+</tr>
+<tr>
+<td align="left">­­&reg;</td>
+<td align="left">注册商标</td>
+<td align="left"><code>&amp;reg;</code></td>
+</tr>
+<tr>
+<td align="left">&deg;</td>
+<td align="left">摄氏度</td>
+<td align="left"><code>&amp;deg;</code></td>
+</tr>
+<tr>
+<td align="left">&plusmn;</td>
+<td align="left">正负号</td>
+<td align="left"><code>&amp;plusmn;</code></td>
+</tr>
+<tr>
+<td align="left">&times;</td>
+<td align="left">乘号</td>
+<td align="left"><code>&amp;times;</code></td>
+</tr>
+<tr>
+<td align="left">&divide;</td>
+<td align="left">除号</td>
+<td align="left"><code>&amp;divide;</code></td>
+</tr>
+<tr>
+<td align="left">&sup2;</td>
+<td align="left">平方</td>
+<td align="left"><code>&amp;sup2;</code></td>
+</tr>
+<tr>
+<td align="left">&sup3;</td>
+<td align="left">立方</td>
+<td align="left"><code>&amp;sup3;</code></td>
+</tr>
+</tbody></table>
+</li>
+</ol>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="http://memorygo.github.io">memorygo</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="http://memorygo.github.io/2024/07/15/html-1/">http://memorygo.github.io/2024/07/15/html-1/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://memorygo.github.io" target="_blank">memorygo的博客</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"></div><div class="post_share"><div class="social-share" data-image="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="next-post pull-full"><a href="/2024/07/15/new/" title="new"><div class="cover" style="background: var(--default-bg-color)"></div><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">new</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">memorygo</div><div class="author-info__description">dsafjkl</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">3</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#html5%E8%AF%AD%E6%B3%95%E5%9F%BA%E7%A1%80%E4%B8%80"><span class="toc-number">1.</span> <span class="toc-text">html5语法基础一</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E5%B8%B8%E7%94%A8%E6%A0%87%E7%AD%BE"><span class="toc-number">1.1.</span> <span class="toc-text">1. 常用标签</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/07/15/html-1/" title="html-1">html-1</a><time datetime="2024-07-15T13:11:14.000Z" title="发表于 2024-07-15 21:11:14">2024-07-15</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/07/15/new/" title="new">new</a><time datetime="2024-07-15T10:11:17.000Z" title="发表于 2024-07-15 18:11:17">2024-07-15</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/07/15/hello-world/" title="Hello World">Hello World</a><time datetime="2024-07-15T08:31:41.980Z" title="发表于 2024-07-15 16:31:41">2024-07-15</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2024 By memorygo</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=4.14.0-b3"></script><script src="/js/main.js?v=4.14.0-b3"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.35/dist/fancybox/fancybox.umd.min.js"></script><div class="js-pjax"><script>(() => {
+  const runMermaid = (ele) => {
+    window.loadMermaid = true
+    const theme = document.documentElement.getAttribute('data-theme') === 'dark' ? 'dark' : 'default'
+
+    Array.from(ele).forEach((item, index) => {
+      const mermaidSrc = item.firstElementChild
+      const mermaidThemeConfig = '%%{init:{ \'theme\':\'' + theme + '\'}}%%\n'
+      const mermaidID = 'mermaid-' + index
+      const mermaidDefinition = mermaidThemeConfig + mermaidSrc.textContent
+
+      const renderFn = mermaid.render(mermaidID, mermaidDefinition)
+
+      const renderV10 = () => {
+        renderFn.then(({svg}) => {
+          mermaidSrc.insertAdjacentHTML('afterend', svg)
+        })
+      }
+
+      const renderV9 = svg => {
+        mermaidSrc.insertAdjacentHTML('afterend', svg)
+      }
+
+      typeof renderFn === 'string' ? renderV9(renderFn) : renderV10()
+    })
+  }
+
+  const codeToMermaid = () => {
+    const codeMermaidEle = document.querySelectorAll('pre > code.mermaid')
+    if (codeMermaidEle.length === 0) return
+    
+    codeMermaidEle.forEach(ele => {
+      const newEle = document.createElement('div')
+      newEle.className = 'mermaid-wrap'
+      newEle.innerHTML = `<pre class="mermaid-src" hidden>${ele.textContent}</pre>`
+      ele.parentNode.replaceWith(newEle)
+    })
+  }
+
+  const loadMermaid = () => {
+    if (false) codeToMermaid()
+    const $mermaid = document.querySelectorAll('#article-container .mermaid-wrap')
+    if ($mermaid.length === 0) return
+
+    const runMermaidFn = () => runMermaid($mermaid)
+    btf.addGlobalFn('themeChange', runMermaidFn, 'mermaid')
+    window.loadMermaid ? runMermaidFn() : btf.getScript('https://cdn.jsdelivr.net/npm/mermaid@10.9.0/dist/mermaid.min.js').then(runMermaidFn)
+  }
+  
+  btf.addGlobalFn('encrypt', loadMermaid, 'mermaid')
+  window.pjax ? loadMermaid() : document.addEventListener('DOMContentLoaded', loadMermaid)
+})()</script></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
