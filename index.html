@@ -53,7 +53,7 @@
   isHome: true,
   isHighlightShrink: false,
   isToc: false,
-  postUpdate: '2024-09-07 20:00:45'
+  postUpdate: '2024-09-07 21:03:17'
 }</script><script>(win=>{
       win.saveToLocal = {
         set: (key, value, ttl) => {
@@ -150,7 +150,45 @@
         }
       }
       detectApple()
-    })(window)</script><meta name="generator" content="Hexo 7.3.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">32</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">0</div></a></div><hr class="custom-hr"/></div></div><div class="page" id="body-wrap"><header class="full_page" id="page-header"><nav id="nav"><span id="blog-info"><a href="/" title="memorygo's blog"><span class="site-name">memorygo's blog</span></a></span><div id="menus"><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="site-info"><h1 id="site-title">memorygo's blog</h1></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts" id="recent-posts"><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2024/09/07/AJAX/" title="AJAX">AJAX</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2024-09-07T11:37:21.000Z" title="Created 2024-09-07 19:37:21">2024-09-07</time></span></div><div class="content">AJAX简介AJAX，全称Asynchronous JavaScript And XML ,即异步的 JS 和 XML
+    })(window)</script><meta name="generator" content="Hexo 7.3.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">33</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">0</div></a></div><hr class="custom-hr"/></div></div><div class="page" id="body-wrap"><header class="full_page" id="page-header"><nav id="nav"><span id="blog-info"><a href="/" title="memorygo's blog"><span class="site-name">memorygo's blog</span></a></span><div id="menus"><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="site-info"><h1 id="site-title">memorygo's blog</h1></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts" id="recent-posts"><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2024/09/07/linux%E5%91%BD%E4%BB%A4/" title="Untitled">Untitled</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2024-09-07T11:37:25.227Z" title="Created 2024-09-07 19:37:25">2024-09-07</time></span></div><div class="content">linux命令用户管理用户基本信息
+​	&#x2F;etc&#x2F;passwd
+用户密码信息
+​	&#x2F;etc&#x2F;shadow
+组信息
+​	&#x2F;etc&#x2F;group
+用户命令useradd
+端口linux支持65535个端口
+11023 		       公认端口   102449151		注册端口
+49152~65535         动态端口
+
+namp查看系统端口占用情况1# yum install namp
+
+1# nmap 127.0.0.1
+
+查看本机的所有端口占用
+netstat查看指定端口占用情况1# yum install net-tools
+
+
+
+1# netstat -anp | grep 6000
+
+查看6000端口 或 6000进程的端口 占用情况
+进程管理ps  [ -e 	-f ]显示进程信息1# ps -ef
+
+查看系统进程
+选项
+-e,显示全部进程
+-f,格式化展示信息
+kill结束进程1# kill -9 6000
+
+强制关闭6000进程
+监控top任务管理器打开1# top
+
+
+
+
+
+df查看磁盘使用情况1# d ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2024/09/07/AJAX/" title="AJAX">AJAX</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2024-09-07T11:37:21.000Z" title="Created 2024-09-07 19:37:21">2024-09-07</time></span></div><div class="content">AJAX简介AJAX，全称Asynchronous JavaScript And XML ,即异步的 JS 和 XML
 通过AJAX可以在浏览器发送异步请求，实现不刷新页面获取数据
 原理是，通过刷新局部元素实现效果
 特点   优势
@@ -166,22 +204,7 @@ SEO 不友好，爬虫爬不了
 
 HTTPHTTP，(hypertext transport protocol )协议 [超文本传输协议] , 协议详细规定了浏览器和万维网服务器之间的规则。http协议是一种 约定，规则。
 请求报文	–&gt; 浏览器对服务器发起请求请求的格式与参数(4个固定部分)
-1234567行		GET[请求类型]	/ url路径	/  HTTP协议的版本头		Host: atguigu.com        Cookie:   ...        Content-type: ...        User-Agent: chrome 83空行体		username=admin&amp;password=ad ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2024/09/07/Django/" title="Django">Django</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2024-09-07T11:37:21.000Z" title="Created 2024-09-07 19:37:21">2024-09-07</time></span></div><div class="content">Django准备安装1pip install django
-
-12345678910c:\pyhon3.12	- python.exe	- Scripts		- pip.exe		- django-admin.exe	# 【工具 ，用来创建django项目】	-Lib		- 内置模块		- site-packages			- flask			- django 	# 框架源码
-
-
-
-创建项目
-django 项目中会有 一些默认的文件和文件夹
-
-从终端进入项目路径后
-输入创建命令
-1&quot;django-admin.exe的路径&quot; startproject 项目名称
-
-如果你未将django运行文件加入path中（python下载时未勾选path选项）,请手动加入path中,或者 输入	“django-admin的路径” startproject 项目名称 	来创建项目
-项目分析默认项目的文件介绍：
-1234567|-- manage.py				# 项目的管理脚本，启动文件、创建app、数据管理 都依赖它。【无需修改】`-- my_Django_01    |-- __in ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2024/09/07/Flask01/" title="Flask01">Flask01</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2024-09-07T11:37:21.000Z" title="Created 2024-09-07 19:37:21">2024-09-07</time></span></div><div class="content">Flask开始导入flask模块
+1234567行		GET[请求类型]	/ url路径	/  HTTP协议的版本头		Host: atguigu.com        Cookie:   ...        Content-type: ...        User-Agent: chrome 83空行体		username=admin&amp;password=ad ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2024/09/07/Flask01/" title="Flask01">Flask01</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2024-09-07T11:37:21.000Z" title="Created 2024-09-07 19:37:21">2024-09-07</time></span></div><div class="content">Flask开始导入flask模块
 1from flask import Flask
 
 
@@ -208,30 +231,22 @@ if __name__==&#39;__main__&#39;:
 URL : http [80]  &#x2F; https [443]  http协议默认80端口，https协议默认443端口
 带参数的路由123@app.route(&quot;/blog/&lt;args_id&gt;&quot;)def blog_id():    return &quot;你是第 %s 位用户&quot; % argc_id
 
-</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2024/09/07/Hexo/" title="Hexo">Hexo</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2024-09-07T11:37:21.000Z" title="Created 2024-09-07 19:37:21">2024-09-07</time></span></div><div class="content">Hexo安装git1sudo yum -y install git
+</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2024/09/07/Django/" title="Django">Django</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2024-09-07T11:37:21.000Z" title="Created 2024-09-07 19:37:21">2024-09-07</time></span></div><div class="content">Django准备安装1pip install django
 
-安装后，可用 git --version 查看版本
-安装nodejs12sudo yum -y install nodejssudo yum -y install npm
-
-用node -v和npm -v查看版本
-安装hexo首先创建一个新的文件夹
-123mkdir blogcd blog
-
-安装hexo
-123npm install -g hexo-clihexo -v
-
-初始化
-12345hexo init myblogcd myblognpm install
-
-至此hexo 本地环境初步配置成功
-你会看到此时路径下有：
-12_config.landscape.yml  node_modules/      package.json  source/_config.yml            package-lock.json  scaffolds/    themes/
+12345678910c:\pyhon3.12	- python.exe	- Scripts		- pip.exe		- django-admin.exe	# 【工具 ，用来创建django项目】	-Lib		- 内置模块		- site-packages			- flask			- django 	# 框架源码
 
 
-node_modules: 依赖包
-public：存放生成的页面
-scaffolds：生成文章的一些模板
-source：用来存放你的文章 ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2024/09/07/Js%E4%BA%8B%E4%BB%B6%E7%9B%91%E5%90%AC/" title="Js事件监听">Js事件监听</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2024-09-07T11:37:21.000Z" title="Created 2024-09-07 19:37:21">2024-09-07</time></span></div><div class="content">Js事件监听事件绑定
+
+创建项目
+django 项目中会有 一些默认的文件和文件夹
+
+从终端进入项目路径后
+输入创建命令
+1&quot;django-admin.exe的路径&quot; startproject 项目名称
+
+如果你未将django运行文件加入path中（python下载时未勾选path选项）,请手动加入path中,或者 输入	“django-admin的路径” startproject 项目名称 	来创建项目
+项目分析默认项目的文件介绍：
+1234567|-- manage.py				# 项目的管理脚本，启动文件、创建app、数据管理 都依赖它。【无需修改】`-- my_Django_01    |-- __in ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2024/09/07/Js%E4%BA%8B%E4%BB%B6%E7%9B%91%E5%90%AC/" title="Js事件监听">Js事件监听</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2024-09-07T11:37:21.000Z" title="Created 2024-09-07 19:37:21">2024-09-07</time></span></div><div class="content">Js事件监听事件绑定
 标签中的事件属性进行绑定
 1234567&lt;input type=&quot;button&quot; onclick=&quot;on()&quot; value=&quot;button&quot;&gt;&lt;script&gt;    function on()&#123;        ...    &#125;&lt;/script&gt;
 
@@ -286,7 +301,30 @@ cmd12345D: 			# 切换磁盘dir 		# 查看当前路径下的文件cls			# 清屏
 
 快速入门运行程序： 编写、编译、运行
 第一个程序 Hello World
-12345public class HelloWorld&#123;    public static void main(String[] args)&#123;        System ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2024/09/07/Kubernetes%20%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" title="Kubernetes 学习笔记">Kubernetes 学习笔记</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2024-09-07T11:37:21.000Z" title="Created 2024-09-07 19:37:21">2024-09-07</time></span></div><div class="content">Kubernetes 学习笔记什么是Kubernetes ?是一个开源的，用来管理多个主机上的容器化的应用。由谷歌公司推出，是其多年经验的产物。
+12345public class HelloWorld&#123;    public static void main(String[] args)&#123;        System ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2024/09/07/Hexo/" title="Hexo">Hexo</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2024-09-07T11:37:21.000Z" title="Created 2024-09-07 19:37:21">2024-09-07</time></span></div><div class="content">Hexo安装git1sudo yum -y install git
+
+安装后，可用 git --version 查看版本
+安装nodejs12sudo yum -y install nodejssudo yum -y install npm
+
+用node -v和npm -v查看版本
+安装hexo首先创建一个新的文件夹
+123mkdir blogcd blog
+
+安装hexo
+123npm install -g hexo-clihexo -v
+
+初始化
+12345hexo init myblogcd myblognpm install
+
+至此hexo 本地环境初步配置成功
+你会看到此时路径下有：
+12_config.landscape.yml  node_modules/      package.json  source/_config.yml            package-lock.json  scaffolds/    themes/
+
+
+node_modules: 依赖包
+public：存放生成的页面
+scaffolds：生成文章的一些模板
+source：用来存放你的文章 ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2024/09/07/Kubernetes%20%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" title="Kubernetes 学习笔记">Kubernetes 学习笔记</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2024-09-07T11:37:21.000Z" title="Created 2024-09-07 19:37:21">2024-09-07</time></span></div><div class="content">Kubernetes 学习笔记什么是Kubernetes ?是一个开源的，用来管理多个主机上的容器化的应用。由谷歌公司推出，是其多年经验的产物。
 目标：让部署容器化更加高效，简单。
 囊括了一种应用的部署，规划，更新，维护机制。
 kubernetes源于希腊语，其首字母k和尾字母s中间有8
@@ -323,15 +361,7 @@ Y 00000-Y 65535
 读写有六种动作 及 相应功能码
 读输出线圈：01 
 读输入线圈：02
-读 ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2024/09/07/Python%20%E8%99%9A%E6%8B%9F%E7%8E%AF%E5%A2%83/" title="Python 虚拟环境">Python 虚拟环境</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2024-09-07T11:37:21.000Z" title="Created 2024-09-07 19:37:21">2024-09-07</time></span></div><div class="content">Python 虚拟环境
-venvpython 从3.3版本，开始自带一个虚拟环境venv
-123python -m venv env_namecd env_name
-
-
-
-虚拟环境的作用：
-当python下载一个第三方库pip install时，可能会下载多个包，但卸载pip uninstall 时，只卸载一个包,长此以往，python本地环境会越来越臃肿复杂，排错时也无从下手，而使用虚拟环境时，遇到解决不了的错误时大不了删除虚拟环境，不会影响本地环境。
-可以用pyenv管理虚拟环境</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2024/09/07/Node.js/" title="Node.js">Node.js</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2024-09-07T11:37:21.000Z" title="Created 2024-09-07 19:37:21">2024-09-07</time></span></div><div class="content">Node.js##引言
+读 ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2024/09/07/Node.js/" title="Node.js">Node.js</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2024-09-07T11:37:21.000Z" title="Created 2024-09-07 19:37:21">2024-09-07</time></span></div><div class="content">Node.js##引言
 为什么JavaScript 可以在浏览器中被执行
 不同浏览器使用不同的JavaScript解析引擎
 
@@ -354,4 +384,4 @@ JS解析引擎
 浏览器就是一个JavaScript的运行环境，JavaScript用浏览器作为运行环境，属于前端开发
 而JavaScript可以通过node作为运行环境就可以做后端开发
 什么是Node.js是一个基于 Chrome V8 引擎的 JavaScript 运行环境
-Node.js 可以做什么Node.js本身只提供基础的功能和API。但是基于Node.js的基本功能 ...</div></div></div><nav id="pagination"><div class="pagination"><span class="page-number current">1</span><a class="page-number" href="/page/2/#content-inner">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/4/#content-inner">4</a><a class="extend next" rel="next" href="/page/2/#content-inner"><i class="fas fa-chevron-right fa-fw"></i></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">tzw</div><div class="author-info__description">this is memorygo's house</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">32</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">0</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>Announcement</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Post</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/09/07/AJAX/" title="AJAX">AJAX</a><time datetime="2024-09-07T11:37:21.000Z" title="Created 2024-09-07 19:37:21">2024-09-07</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/09/07/Django/" title="Django">Django</a><time datetime="2024-09-07T11:37:21.000Z" title="Created 2024-09-07 19:37:21">2024-09-07</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/09/07/Flask01/" title="Flask01">Flask01</a><time datetime="2024-09-07T11:37:21.000Z" title="Created 2024-09-07 19:37:21">2024-09-07</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/09/07/Hexo/" title="Hexo">Hexo</a><time datetime="2024-09-07T11:37:21.000Z" title="Created 2024-09-07 19:37:21">2024-09-07</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/09/07/Js%E4%BA%8B%E4%BB%B6%E7%9B%91%E5%90%AC/" title="Js事件监听">Js事件监听</a><time datetime="2024-09-07T11:37:21.000Z" title="Created 2024-09-07 19:37:21">2024-09-07</time></div></div></div></div><div class="card-widget card-archives"><div class="item-headline"><i class="fas fa-archive"></i><span>Archives</span></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/09/"><span class="card-archive-list-date">September 2024</span><span class="card-archive-list-count">32</span></a></li></ul></div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>Info</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">Article :</div><div class="item-count">32</div></div><div class="webinfo-item"><div class="item-name">UV :</div><div class="item-count" id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">PV :</div><div class="item-count" id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">Last Update :</div><div class="item-count" id="last-push-date" data-lastPushDate="2024-09-07T12:00:45.003Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2024 By tzw</div><div class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="Toggle Between Light And Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle between Single-column and Double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="Setting"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="Back To Top"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=4.13.0"></script><script src="/js/main.js?v=4.13.0"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.33/dist/fancybox/fancybox.umd.min.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
+Node.js 可以做什么Node.js本身只提供基础的功能和API。但是基于Node.js的基本功能 ...</div></div></div><nav id="pagination"><div class="pagination"><span class="page-number current">1</span><a class="page-number" href="/page/2/#content-inner">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/4/#content-inner">4</a><a class="extend next" rel="next" href="/page/2/#content-inner"><i class="fas fa-chevron-right fa-fw"></i></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">tzw</div><div class="author-info__description">this is memorygo's house</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">33</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">0</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>Announcement</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Post</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/09/07/linux%E5%91%BD%E4%BB%A4/" title="Untitled">Untitled</a><time datetime="2024-09-07T11:37:25.227Z" title="Created 2024-09-07 19:37:25">2024-09-07</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/09/07/AJAX/" title="AJAX">AJAX</a><time datetime="2024-09-07T11:37:21.000Z" title="Created 2024-09-07 19:37:21">2024-09-07</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/09/07/Flask01/" title="Flask01">Flask01</a><time datetime="2024-09-07T11:37:21.000Z" title="Created 2024-09-07 19:37:21">2024-09-07</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/09/07/Django/" title="Django">Django</a><time datetime="2024-09-07T11:37:21.000Z" title="Created 2024-09-07 19:37:21">2024-09-07</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/09/07/Js%E4%BA%8B%E4%BB%B6%E7%9B%91%E5%90%AC/" title="Js事件监听">Js事件监听</a><time datetime="2024-09-07T11:37:21.000Z" title="Created 2024-09-07 19:37:21">2024-09-07</time></div></div></div></div><div class="card-widget card-archives"><div class="item-headline"><i class="fas fa-archive"></i><span>Archives</span></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/09/"><span class="card-archive-list-date">September 2024</span><span class="card-archive-list-count">33</span></a></li></ul></div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>Info</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">Article :</div><div class="item-count">33</div></div><div class="webinfo-item"><div class="item-name">UV :</div><div class="item-count" id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">PV :</div><div class="item-count" id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">Last Update :</div><div class="item-count" id="last-push-date" data-lastPushDate="2024-09-07T13:03:17.408Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2024 By tzw</div><div class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="Toggle Between Light And Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle between Single-column and Double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="Setting"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="Back To Top"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=4.13.0"></script><script src="/js/main.js?v=4.13.0"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.33/dist/fancybox/fancybox.umd.min.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
