@@ -53,7 +53,7 @@
   isHome: true,
   isHighlightShrink: false,
   isToc: false,
-  postUpdate: '2024-09-07 21:03:17'
+  postUpdate: '2024-09-07 21:07:59'
 }</script><script>(win=>{
       win.saveToLocal = {
         set: (key, value, ttl) => {
@@ -204,26 +204,7 @@
 
 &lt;img&gt;
 
-&lt;img src=&quot;url&quot;/&gt;  单标 ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2024/09/07/flask/" title="flask">flask</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2024-09-07T11:37:21.000Z" title="Created 2024-09-07 19:37:21">2024-09-07</time></span></div><div class="content">Flask占位符&#123;&#123; item &#125;&#125;
-123&#123;% for items in data_list %&#125;&#123;% endfor %&#125;
-
-
-
-
-
-
-
-mysql
-char() 定长字符串,速度快
-varchar()  变长字符串，省空间
-text 变长的大字符串
-mediumtext&#x2F;longtext 更大字符串
-datetime 
-date
-
-删除delete from table01 where  …
-修改update table02 set 列&#x3D;值，列&#x3D;值 where  …
-python 连接mysql1234567891011121314151617181920212223242526import pymysql#连接数据库conn = pymysql.connect(host=&quot;&quot;,port=,user=&quot;&quot;,...)	# 连接数据库 拿取返回值cursor = conn.cursor(cursor=pymysql.cursors.Dic ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2024/09/07/html02/" title="html02">html02</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2024-09-07T11:37:21.000Z" title="Created 2024-09-07 19:37:21">2024-09-07</time></span></div><div class="content">html5基础二常用标签 2###表格
+&lt;img src=&quot;url&quot;/&gt;  单标 ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2024/09/07/html02/" title="html02">html02</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2024-09-07T11:37:21.000Z" title="Created 2024-09-07 19:37:21">2024-09-07</time></span></div><div class="content">html5基础二常用标签 2###表格
 
 
 用于展示数据
@@ -350,7 +331,45 @@ str.charAt()
 1234var s = str.charAt(3)console.log(s);//取出字符串内索引为3的字符
 
 str.indexOf()
- ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2024/09/07/markdown%E8%AF%AD%E6%B3%95/" title="markdown语法">markdown语法</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2024-09-07T11:37:21.000Z" title="Created 2024-09-07 19:37:21">2024-09-07</time></span></div><div class="content">二 基本语法
+ ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2024/09/07/linux%E5%91%BD%E4%BB%A4/" title="linux命令">linux命令</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2024-09-07T11:37:21.000Z" title="Created 2024-09-07 19:37:21">2024-09-07</time></span></div><div class="content">linux命令用户管理用户基本信息
+​	&#x2F;etc&#x2F;passwd
+用户密码信息
+​	&#x2F;etc&#x2F;shadow
+组信息
+​	&#x2F;etc&#x2F;group
+用户命令useradd
+端口linux支持65535个端口
+11023 		       公认端口   102449151		注册端口
+49152~65535         动态端口
+
+namp查看系统端口占用情况1# yum install namp
+
+1# nmap 127.0.0.1
+
+查看本机的所有端口占用
+netstat查看指定端口占用情况1# yum install net-tools
+
+
+
+1# netstat -anp | grep 6000
+
+查看6000端口 或 6000进程的端口 占用情况
+进程管理ps  [ -e 	-f ]显示进程信息1# ps -ef
+
+查看系统进程
+选项
+-e,显示全部进程
+-f,格式化展示信息
+kill结束进程1# kill -9 6000
+
+强制关闭6000进程
+监控top任务管理器打开1# top
+
+
+
+
+
+df查看磁盘使用情况1# d ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2024/09/07/markdown%E8%AF%AD%E6%B3%95/" title="markdown语法">markdown语法</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2024-09-07T11:37:21.000Z" title="Created 2024-09-07 19:37:21">2024-09-07</time></span></div><div class="content">二 基本语法
 标题
 
 #一级标题##二级标题###三级标题…
@@ -467,26 +486,7 @@ https://www.baidu.com
 
 
 json.dumps将Python对象转化为json格式字符串
-12345678910# 假设我们有一个Python对象，比如字典  data = &#123;      &#x27;name&#x27;: &#x27;John Doe&#x27;,      &#x27;age&#x27;: 30,      &#x27;c ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2024/09/07/python%20%E6%A0%BC%E5%BC%8F%E5%8C%96%E8%BE%93%E5%87%BA/" title="python 格式化输出">python 格式化输出</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2024-09-07T11:37:21.000Z" title="Created 2024-09-07 19:37:21">2024-09-07</time></span></div><div class="content">python 格式化输出123456789101112a = &#x27;hello&#x27;b = &#x27;world&#x27;print(a,b)// 输出 hello world ，默认 sep 是空格 , end是换行符a = &#x27;hello&#x27;b = &#x27;world&#x27;print(a,b,sep=&#x27;,&#x27;)// 输出 hello,world 
-
-
-
-
-
-占位符%  格式化单个
-12345name = &#x27;alex&#x27;print(&quot;hello, I am %s&quot; % name)// 等价于 print(&quot;hello, I am %s&quot; % (name,))
-
-
-
-
-
-多个
-12345name = &#x27;alex&#x27;age = 18print(&quot;hello, I am %s , %d years old&quot; % (name,age))
-
-
-
-多个（字典）
-12345name = &#x27;alex&#x27;age = 18print ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2024/09/07/python%20%E7%88%AC%E8%99%AB/" title="python 爬虫">python 爬虫</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2024-09-07T11:37:21.000Z" title="Created 2024-09-07 19:37:21">2024-09-07</time></span></div><div class="content">python 爬虫爬虫基本流程一、数据来源分析
+12345678910# 假设我们有一个Python对象，比如字典  data = &#123;      &#x27;name&#x27;: &#x27;John Doe&#x27;,      &#x27;age&#x27;: 30,      &#x27;c ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2024/09/07/python%20%E7%88%AC%E8%99%AB/" title="python 爬虫">python 爬虫</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2024-09-07T11:37:21.000Z" title="Created 2024-09-07 19:37:21">2024-09-07</time></span></div><div class="content">python 爬虫爬虫基本流程一、数据来源分析
 
 明确需求： 明确采集的网站以及数据
 网址： https:&#x2F;&#x2F; www.xxx
@@ -509,7 +509,26 @@ json.dumps将Python对象转化为json格式字符串
 保存数据
 
 数据获取
-123456789101112131415161718192021222324252627282930313233343536373839404142434445# 导入数据请求模块import requests# 请求网址url = &#x27;https://&#x27;# 模拟浏览器headers = &#123;    &#x27;Cookie&#x27;:&#x27;........&#x27;,    &#x27;User-Agent&#x27;:&#x27;.......&#x27;&#125;# 发送请求response = requests.get(url= ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2024/09/07/test/" title="test">test</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2024-09-07T11:37:21.000Z" title="Created 2024-09-07 19:37:21">2024-09-07</time></span></div><div class="content">二 基本语法
+123456789101112131415161718192021222324252627282930313233343536373839404142434445# 导入数据请求模块import requests# 请求网址url = &#x27;https://&#x27;# 模拟浏览器headers = &#123;    &#x27;Cookie&#x27;:&#x27;........&#x27;,    &#x27;User-Agent&#x27;:&#x27;.......&#x27;&#125;# 发送请求response = requests.get(url= ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2024/09/07/python%20%E6%A0%BC%E5%BC%8F%E5%8C%96%E8%BE%93%E5%87%BA/" title="python 格式化输出">python 格式化输出</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2024-09-07T11:37:21.000Z" title="Created 2024-09-07 19:37:21">2024-09-07</time></span></div><div class="content">python 格式化输出123456789101112a = &#x27;hello&#x27;b = &#x27;world&#x27;print(a,b)// 输出 hello world ，默认 sep 是空格 , end是换行符a = &#x27;hello&#x27;b = &#x27;world&#x27;print(a,b,sep=&#x27;,&#x27;)// 输出 hello,world 
+
+
+
+
+
+占位符%  格式化单个
+12345name = &#x27;alex&#x27;print(&quot;hello, I am %s&quot; % name)// 等价于 print(&quot;hello, I am %s&quot; % (name,))
+
+
+
+
+
+多个
+12345name = &#x27;alex&#x27;age = 18print(&quot;hello, I am %s , %d years old&quot; % (name,age))
+
+
+
+多个（字典）
+12345name = &#x27;alex&#x27;age = 18print ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2024/09/07/test/" title="test">test</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2024-09-07T11:37:21.000Z" title="Created 2024-09-07 19:37:21">2024-09-07</time></span></div><div class="content">二 基本语法
 标题
 
 #一级标题##二级标题###三级标题…
@@ -620,4 +639,4 @@ https://www.baidu.com
 
 图片
 
-使用图床保存图片并实现插入[路过图床] : https://imgse. ...</div></div></div><nav id="pagination"><div class="pagination"><a class="extend prev" rel="prev" href="/page/2/#content-inner"><i class="fas fa-chevron-left fa-fw"></i></a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/#content-inner">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/#content-inner">4</a><a class="extend next" rel="next" href="/page/4/#content-inner"><i class="fas fa-chevron-right fa-fw"></i></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">tzw</div><div class="author-info__description">this is memorygo's house</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">33</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">0</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>Announcement</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Post</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/09/07/linux%E5%91%BD%E4%BB%A4/" title="Untitled">Untitled</a><time datetime="2024-09-07T11:37:25.227Z" title="Created 2024-09-07 19:37:25">2024-09-07</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/09/07/AJAX/" title="AJAX">AJAX</a><time datetime="2024-09-07T11:37:21.000Z" title="Created 2024-09-07 19:37:21">2024-09-07</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/09/07/Flask01/" title="Flask01">Flask01</a><time datetime="2024-09-07T11:37:21.000Z" title="Created 2024-09-07 19:37:21">2024-09-07</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/09/07/Django/" title="Django">Django</a><time datetime="2024-09-07T11:37:21.000Z" title="Created 2024-09-07 19:37:21">2024-09-07</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/09/07/Js%E4%BA%8B%E4%BB%B6%E7%9B%91%E5%90%AC/" title="Js事件监听">Js事件监听</a><time datetime="2024-09-07T11:37:21.000Z" title="Created 2024-09-07 19:37:21">2024-09-07</time></div></div></div></div><div class="card-widget card-archives"><div class="item-headline"><i class="fas fa-archive"></i><span>Archives</span></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/09/"><span class="card-archive-list-date">September 2024</span><span class="card-archive-list-count">33</span></a></li></ul></div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>Info</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">Article :</div><div class="item-count">33</div></div><div class="webinfo-item"><div class="item-name">UV :</div><div class="item-count" id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">PV :</div><div class="item-count" id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">Last Update :</div><div class="item-count" id="last-push-date" data-lastPushDate="2024-09-07T13:03:17.408Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2024 By tzw</div><div class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="Toggle Between Light And Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle between Single-column and Double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="Setting"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="Back To Top"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=4.13.0"></script><script src="/js/main.js?v=4.13.0"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.33/dist/fancybox/fancybox.umd.min.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
+使用图床保存图片并实现插入[路过图床] : https://imgse. ...</div></div></div><nav id="pagination"><div class="pagination"><a class="extend prev" rel="prev" href="/page/2/#content-inner"><i class="fas fa-chevron-left fa-fw"></i></a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/#content-inner">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/#content-inner">4</a><a class="extend next" rel="next" href="/page/4/#content-inner"><i class="fas fa-chevron-right fa-fw"></i></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">tzw</div><div class="author-info__description">this is memorygo's house</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">33</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">0</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>Announcement</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Post</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/09/07/AJAX/" title="AJAX">AJAX</a><time datetime="2024-09-07T11:37:21.000Z" title="Created 2024-09-07 19:37:21">2024-09-07</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/09/07/Django/" title="Django">Django</a><time datetime="2024-09-07T11:37:21.000Z" title="Created 2024-09-07 19:37:21">2024-09-07</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/09/07/Flask01/" title="Flask01">Flask01</a><time datetime="2024-09-07T11:37:21.000Z" title="Created 2024-09-07 19:37:21">2024-09-07</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/09/07/Hexo/" title="Hexo">Hexo</a><time datetime="2024-09-07T11:37:21.000Z" title="Created 2024-09-07 19:37:21">2024-09-07</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/09/07/Java%20%E5%9F%BA%E7%A1%80/" title="Java 基础">Java 基础</a><time datetime="2024-09-07T11:37:21.000Z" title="Created 2024-09-07 19:37:21">2024-09-07</time></div></div></div></div><div class="card-widget card-archives"><div class="item-headline"><i class="fas fa-archive"></i><span>Archives</span></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/09/"><span class="card-archive-list-date">September 2024</span><span class="card-archive-list-count">33</span></a></li></ul></div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>Info</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">Article :</div><div class="item-count">33</div></div><div class="webinfo-item"><div class="item-name">UV :</div><div class="item-count" id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">PV :</div><div class="item-count" id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">Last Update :</div><div class="item-count" id="last-push-date" data-lastPushDate="2024-09-07T13:07:59.536Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2024 By tzw</div><div class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="Toggle Between Light And Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle between Single-column and Double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="Setting"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="Back To Top"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=4.13.0"></script><script src="/js/main.js?v=4.13.0"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.33/dist/fancybox/fancybox.umd.min.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
