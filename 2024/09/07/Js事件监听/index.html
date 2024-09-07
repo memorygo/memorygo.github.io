@@ -1,0 +1,295 @@
+<!DOCTYPE html><html lang="en" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>Js事件监听.md | memorygo's blog</title><meta name="author" content="John Doe"><meta name="copyright" content="John Doe"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="Js事件监听事件绑定 标签中的事件属性进行绑定 1234567&lt;input type&#x3D;&quot;button&quot; onclick&#x3D;&quot;on()&quot; value&#x3D;&quot;button&quot;&gt;&lt;script&gt;    function on()&#123;        ...    &#125;&lt;&#x2F;script&gt;  通过DOM元素">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Js事件监听.md">
+<meta property="og:url" content="http://example.com/2024/09/07/Js%E4%BA%8B%E4%BB%B6%E7%9B%91%E5%90%AC/index.html">
+<meta property="og:site_name" content="memorygo&#39;s blog">
+<meta property="og:description" content="Js事件监听事件绑定 标签中的事件属性进行绑定 1234567&lt;input type&#x3D;&quot;button&quot; onclick&#x3D;&quot;on()&quot; value&#x3D;&quot;button&quot;&gt;&lt;script&gt;    function on()&#123;        ...    &#125;&lt;&#x2F;script&gt;  通过DOM元素">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png">
+<meta property="article:published_time" content="2024-09-07T11:19:14.000Z">
+<meta property="article:modified_time" content="2024-09-07T11:19:15.282Z">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://example.com/2024/09/07/Js%E4%BA%8B%E4%BB%B6%E7%9B%91%E5%90%AC/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=4.13.0"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.1/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.33/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: 'Copy Successful',
+    error: 'Copy Error',
+    noSupport: 'Browser Not Supported'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: 'Just now',
+    min: 'minutes ago',
+    hour: 'hours ago',
+    day: 'days ago',
+    month: 'months ago'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.11.1/dist/infinitegrid.min.js',
+    buttonText: 'Load More'
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'Js事件监听.md',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2024-09-07 19:19:15'
+}</script><script>(win=>{
+      win.saveToLocal = {
+        set: (key, value, ttl) => {
+          if (ttl === 0) return
+          const now = Date.now()
+          const expiry = now + ttl * 86400000
+          const item = {
+            value,
+            expiry
+          }
+          localStorage.setItem(key, JSON.stringify(item))
+        },
+      
+        get: key => {
+          const itemStr = localStorage.getItem(key)
+      
+          if (!itemStr) {
+            return undefined
+          }
+          const item = JSON.parse(itemStr)
+          const now = Date.now()
+      
+          if (now > item.expiry) {
+            localStorage.removeItem(key)
+            return undefined
+          }
+          return item.value
+        }
+      }
+    
+      win.getScript = (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        script.onerror = reject
+        script.onload = script.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          script.onload = script.onreadystatechange = null
+          resolve()
+        }
+
+        Object.keys(attr).forEach(key => {
+          script.setAttribute(key, attr[key])
+        })
+
+        document.head.appendChild(script)
+      })
+    
+      win.getCSS = (url, id = false) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onerror = reject
+        link.onload = link.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          link.onload = link.onreadystatechange = null
+          resolve()
+        }
+        document.head.appendChild(link)
+      })
+    
+      win.activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+        if (t === 'dark') activateDarkMode()
+        else if (t === 'light') activateLightMode()
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+      const detectApple = () => {
+        if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+          document.documentElement.classList.add('apple')
+        }
+      }
+      detectApple()
+    })(window)</script><meta name="generator" content="Hexo 7.3.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">37</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">0</div></a></div><hr class="custom-hr"/></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header"><nav id="nav"><span id="blog-info"><a href="/" title="memorygo's blog"><span class="site-name">memorygo's blog</span></a></span><div id="menus"><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">Js事件监听.md</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">Created</span><time class="post-meta-date-created" datetime="2024-09-07T11:19:14.000Z" title="Created 2024-09-07 19:19:14">2024-09-07</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">Updated</span><time class="post-meta-date-updated" datetime="2024-09-07T11:19:15.282Z" title="Updated 2024-09-07 19:19:15">2024-09-07</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="Js事件监听.md"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">Post Views:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="Js事件监听"><a href="#Js事件监听" class="headerlink" title="Js事件监听"></a>Js事件监听</h1><h2 id="事件绑定"><a href="#事件绑定" class="headerlink" title="事件绑定"></a>事件绑定</h2><ul>
+<li><p>标签中的事件属性进行绑定</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;button&quot;</span> <span class="attr">onclick</span>=<span class="string">&quot;on()&quot;</span> <span class="attr">value</span>=<span class="string">&quot;button&quot;</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript">    <span class="keyword">function</span> <span class="title function_">on</span>(<span class="params"></span>)&#123;</span></span><br><span class="line"><span class="language-javascript">        ...</span></span><br><span class="line"><span class="language-javascript">    &#125;</span></span><br><span class="line"><span class="language-javascript"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>通过DOM元素属性绑定</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;button&quot;</span> <span class="attr">id</span>=<span class="string">&quot;btm&quot;</span> <span class="attr">value</span>=<span class="string">&quot;button&quot;</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript">    <span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">&#x27;btn&#x27;</span>).<span class="property">onclick</span>=<span class="keyword">function</span>(<span class="params"></span>)&#123;</span></span><br><span class="line"><span class="language-javascript">        ...</span></span><br><span class="line"><span class="language-javascript">    &#125;</span></span><br><span class="line"><span class="language-javascript"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+<h2 id="常见事件"><a href="#常见事件" class="headerlink" title="常见事件"></a>常见事件</h2><table>
+<thead>
+<tr>
+<th>事件名</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>onclick</td>
+<td>鼠标单击</td>
+</tr>
+<tr>
+<td>onblur</td>
+<td>失去焦点</td>
+</tr>
+<tr>
+<td>onfocus</td>
+<td>获得焦点</td>
+</tr>
+<tr>
+<td>onload</td>
+<td>完成加载</td>
+</tr>
+<tr>
+<td>onsubmit</td>
+<td>表单提交时</td>
+</tr>
+<tr>
+<td>onkeydown</td>
+<td>某个键盘键被按下</td>
+</tr>
+<tr>
+<td>onmouseover</td>
+<td>鼠标移到某元素上</td>
+</tr>
+<tr>
+<td>onmouseout</td>
+<td>鼠标移出某元素</td>
+</tr>
+</tbody></table>
+<h1 id=""><a href="#" class="headerlink" title=""></a></h1><h1 id="jQuery"><a href="#jQuery" class="headerlink" title="jQuery"></a>jQuery</h1><h2 id="什么是jQuery"><a href="#什么是jQuery" class="headerlink" title="什么是jQuery"></a>什么是jQuery</h2><p>是一个JavaScript的第三方模块（库），是基于浏览器内置api封装出来的。</p>
+<p>比DOM更简洁</p>
+<h3 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h3><ul>
+<li><p>下载jQuery</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https:<span class="comment">//jQuery.com/</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>导入jQuery</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;script src=<span class="string">&quot;static/jquery-3.6.0.min.js&quot;</span>&gt; &lt;/script&gt;</span><br></pre></td></tr></table></figure>
+
+<p>​</p>
+</li>
+</ul>
+<h3 id="对比"><a href="#对比" class="headerlink" title="对比"></a>对比</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">&#x27;id&#x27;</span>).<span class="property">innerText</span>  = <span class="string">&quot;id01&quot;</span>;</span><br><span class="line"><span class="comment">//javascript 原生</span></span><br><span class="line"></span><br><span class="line">$(<span class="string">&quot;#txt&quot;</span>).<span class="title function_">text</span>(<span class="string">&quot;id01&quot;</span>);</span><br><span class="line"><span class="comment">//利用jQuery</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="寻找标签"><a href="#寻找标签" class="headerlink" title="寻找标签"></a>寻找标签</h3><ul>
+<li><p>ID</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">&quot;#id&quot;</span>)</span><br></pre></td></tr></table></figure>
+
+<p>​</p>
+</li>
+<li><p>样式</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">&quot;.c1ass&quot;</span>)</span><br></pre></td></tr></table></figure>
+
+<p>​</p>
+</li>
+<li><p>标签</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">&quot;div&quot;</span>)</span><br></pre></td></tr></table></figure>
+
+</li>
+<li><p>层级</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">&quot;.c1 .c2 a&quot;</span>)</span><br></pre></td></tr></table></figure>
+
+<p>​</p>
+</li>
+<li><p>多级</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">&quot;.c1,.c2,li&quot;</span>)</span><br></pre></td></tr></table></figure>
+
+<p>​</p>
+</li>
+<li><p>属性</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">&quot;input[name=&#x27;username&#x27;]&quot;</span>)</span><br></pre></td></tr></table></figure>
+
+<p>​</p>
+</li>
+</ul>
+<h2 id="间接寻找"><a href="#间接寻找" class="headerlink" title="间接寻找"></a>间接寻找</h2><ul>
+<li><p>找同级</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">&quot;&quot;</span>).<span class="title function_">prev</span>()	<span class="comment">//找上一个</span></span><br><span class="line"></span><br><span class="line">$(<span class="string">&quot;&quot;</span>).<span class="title function_">next</span>() 	<span class="comment">//找下一个</span></span><br></pre></td></tr></table></figure>
+
+
+<p>$(“”).siblings()	&#x2F;&#x2F;找所有的同级</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">  ​</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">- 找父子</span><br><span class="line"></span><br><span class="line">  ```javascript</span><br><span class="line">  $(&quot;&quot;).parent()	//找父级</span><br><span class="line">  $(&quot;&quot;).parent.parent() //找父级的父级</span><br><span class="line"></span><br><span class="line">  $(&quot;&quot;).children() 	//找所有子级</span><br><span class="line">  $(&quot;&quot;).children(&quot;#id&quot;) //找在子代中找</span><br><span class="line"></span><br><span class="line">  $(&quot;&quot;).find(&quot;#id&quot;) //在后代中找</span><br></pre></td></tr></table></figure>
+
+<p>​</p>
+</li>
+</ul>
+<h2 id="操作样式"><a href="#操作样式" class="headerlink" title="操作样式"></a>操作样式</h2><ul>
+<li>addClass</li>
+<li>removeClass</li>
+<li>hasClass</li>
+</ul>
+<h2 id="值的操作"><a href="#值的操作" class="headerlink" title="值的操作"></a>值的操作</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&#x27;c1&#x27;</span>&gt;</span>content<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">&quot;#c1&quot;</span>).<span class="title function_">text</span>()			 <span class="comment">//获取文本内容</span></span><br><span class="line">$(<span class="string">&quot;#c1&quot;</span>).<span class="title function_">text</span>(<span class="string">&quot;休息&quot;</span>)  	<span class="comment">//设置文本内容</span></span><br></pre></td></tr></table></figure>
+
+
+
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&#x27;text&#x27;</span> <span class="attr">id</span>=<span class="string">&#x27;c2&#x27;</span>/&gt;</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">&quot;#c2&quot;</span>).<span class="title function_">val</span>()				<span class="comment">//获取用户输入的值</span></span><br><span class="line">$(<span class="string">&quot;#c2&quot;</span>).<span class="title function_">val</span>(<span class="string">&quot;hello&quot;</span>)		<span class="comment">//设置用户输入的值</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="事件"><a href="#事件" class="headerlink" title="事件"></a>事件</h2><p>原生绑定事件</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+<p>jQuery 绑定事件</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">ul</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">li</span>&gt;</span>user01<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">li</span>&gt;</span>user02<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript">    $(<span class="string">&quot;li&quot;</span>).<span class="title function_">click</span>(<span class="params"><span class="keyword">function</span>()</span>) &#123;</span></span><br><span class="line"><span class="language-javascript">            ...      <span class="comment">//点击li标签时执行</span></span></span><br><span class="line"><span class="language-javascript">                  &#125;</span></span><br><span class="line"><span class="language-javascript"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">// $(this) 表示当前点击的是哪个标签（单个标签）</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="执行时机"><a href="#执行时机" class="headerlink" title="执行时机"></a>执行时机</h2><p>默认 当页面加载成功 之后才会执行js</p>
+<p>修改补充</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript">    $(<span class="keyword">function</span>(<span class="params"></span>)) &#123;</span></span><br><span class="line"><span class="language-javascript">      <span class="comment">//当页面框架加载完成后自动执行</span></span></span><br><span class="line"><span class="language-javascript">      &#125;</span></span><br><span class="line"><span class="language-javascript"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="补充"><a href="#补充" class="headerlink" title="补充"></a>补充</h2><p>有其他需要时，请自行上网查阅jQuery手册</p>
+<h2 id="什么是Vue"><a href="#什么是Vue" class="headerlink" title="什么是Vue"></a>什么是Vue</h2><p>是一种前端框架，可以免除原生JavaScript的DOM操作,简化书写。</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>Author: </span><span class="post-copyright-info"><a href="http://example.com">John Doe</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>Link: </span><span class="post-copyright-info"><a href="http://example.com/2024/09/07/Js%E4%BA%8B%E4%BB%B6%E7%9B%91%E5%90%AC/">http://example.com/2024/09/07/Js%E4%BA%8B%E4%BB%B6%E7%9B%91%E5%90%AC/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>Copyright Notice: </span><span class="post-copyright-info">All articles in this blog are licensed under <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> unless stating additionally.</span></div></div><div class="tag_share"><div class="post-meta__tag-list"></div><div class="post_share"><div class="social-share" data-image="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2024/09/07/Java-%E5%9F%BA%E7%A1%80/" title="Java 基础.md"><div class="cover" style="background: var(--default-bg-color)"></div><div class="pagination-info"><div class="label">Previous</div><div class="prev_info">Java 基础.md</div></div></a></div><div class="next-post pull-right"><a href="/2024/09/07/Python-%E8%99%9A%E6%8B%9F%E7%8E%AF%E5%A2%83/" title="Python 虚拟环境.md"><div class="cover" style="background: var(--default-bg-color)"></div><div class="pagination-info"><div class="label">Next</div><div class="next_info">Python 虚拟环境.md</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">John Doe</div><div class="author-info__description">this is memorygo's house</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">37</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">0</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>Announcement</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>Contents</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Js%E4%BA%8B%E4%BB%B6%E7%9B%91%E5%90%AC"><span class="toc-number">1.</span> <span class="toc-text">Js事件监听</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8B%E4%BB%B6%E7%BB%91%E5%AE%9A"><span class="toc-number">1.1.</span> <span class="toc-text">事件绑定</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B8%B8%E8%A7%81%E4%BA%8B%E4%BB%B6"><span class="toc-number">1.2.</span> <span class="toc-text">常见事件</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">2.</span> <span class="toc-text"></span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#jQuery"><span class="toc-number">3.</span> <span class="toc-text">jQuery</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BB%80%E4%B9%88%E6%98%AFjQuery"><span class="toc-number">3.1.</span> <span class="toc-text">什么是jQuery</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8"><span class="toc-number">3.1.1.</span> <span class="toc-text">使用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AF%B9%E6%AF%94"><span class="toc-number">3.1.2.</span> <span class="toc-text">对比</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AF%BB%E6%89%BE%E6%A0%87%E7%AD%BE"><span class="toc-number">3.1.3.</span> <span class="toc-text">寻找标签</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%97%B4%E6%8E%A5%E5%AF%BB%E6%89%BE"><span class="toc-number">3.2.</span> <span class="toc-text">间接寻找</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%93%8D%E4%BD%9C%E6%A0%B7%E5%BC%8F"><span class="toc-number">3.3.</span> <span class="toc-text">操作样式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%80%BC%E7%9A%84%E6%93%8D%E4%BD%9C"><span class="toc-number">3.4.</span> <span class="toc-text">值的操作</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8B%E4%BB%B6"><span class="toc-number">3.5.</span> <span class="toc-text">事件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%89%A7%E8%A1%8C%E6%97%B6%E6%9C%BA"><span class="toc-number">3.6.</span> <span class="toc-text">执行时机</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%A1%A5%E5%85%85"><span class="toc-number">3.7.</span> <span class="toc-text">补充</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BB%80%E4%B9%88%E6%98%AFVue"><span class="toc-number">3.8.</span> <span class="toc-text">什么是Vue</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Post</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/09/07/bigtest/" title="2024-09-07-bigtest.md">2024-09-07-bigtest.md</a><time datetime="2024-09-07T11:19:14.000Z" title="Created 2024-09-07 19:19:14">2024-09-07</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/09/07/7-16-target/" title="7.16 target.md">7.16 target.md</a><time datetime="2024-09-07T11:19:14.000Z" title="Created 2024-09-07 19:19:14">2024-09-07</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/09/07/AJAX/" title="AJAX.md">AJAX.md</a><time datetime="2024-09-07T11:19:14.000Z" title="Created 2024-09-07 19:19:14">2024-09-07</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/09/07/Django/" title="Django.md">Django.md</a><time datetime="2024-09-07T11:19:14.000Z" title="Created 2024-09-07 19:19:14">2024-09-07</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/09/07/Flask01/" title="Flask01.md">Flask01.md</a><time datetime="2024-09-07T11:19:14.000Z" title="Created 2024-09-07 19:19:14">2024-09-07</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2024 By John Doe</div><div class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="Read Mode"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="Toggle Between Light And Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle between Single-column and Double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="Setting"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="Table Of Contents"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="Back To Top"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=4.13.0"></script><script src="/js/main.js?v=4.13.0"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.33/dist/fancybox/fancybox.umd.min.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
