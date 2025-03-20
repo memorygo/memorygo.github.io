@@ -1,0 +1,197 @@
+<!DOCTYPE html><html lang="en" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>shell练习--hexo添加front-matter | memorygo's blog</title><meta name="author" content="tzw"><meta name="copyright" content="tzw"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="shell脚本–hexo添加front-matter本文旨在给已经写好的md文件添加hexo到front-matter，以便其能快速移植到hexo中。  脚本名  1add-fm  可自行更改名称  使用  1add-fm [filename] [option](可选)     option 12345-T,--title: 设置 文章名字-t,--tag: 设置 标签-c,--categorie">
+<meta property="og:type" content="article">
+<meta property="og:title" content="shell练习--hexo添加front-matter">
+<meta property="og:url" content="http://example.com/2025/03/20/shell%E7%BB%83%E4%B9%A0--hexo%E6%B7%BB%E5%8A%A0front-matter/index.html">
+<meta property="og:site_name" content="memorygo&#39;s blog">
+<meta property="og:description" content="shell脚本–hexo添加front-matter本文旨在给已经写好的md文件添加hexo到front-matter，以便其能快速移植到hexo中。  脚本名  1add-fm  可自行更改名称  使用  1add-fm [filename] [option](可选)     option 12345-T,--title: 设置 文章名字-t,--tag: 设置 标签-c,--categorie">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://pic.imgdb.cn/item/66deb3ecd9c307b7e9dd4dd9.png">
+<meta property="article:published_time" content="2025-03-20T04:05:37.000Z">
+<meta property="article:modified_time" content="2025-03-20T04:10:47.365Z">
+<meta property="article:author" content="tzw">
+<meta property="article:tag" content="hexo">
+<meta property="article:tag" content="shell">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://pic.imgdb.cn/item/66deb3ecd9c307b7e9dd4dd9.png"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://example.com/2025/03/20/shell%E7%BB%83%E4%B9%A0--hexo%E6%B7%BB%E5%8A%A0front-matter/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=4.13.0"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.1/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.33/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: 'Copy Successful',
+    error: 'Copy Error',
+    noSupport: 'Browser Not Supported'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: 'Just now',
+    min: 'minutes ago',
+    hour: 'hours ago',
+    day: 'days ago',
+    month: 'months ago'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.11.1/dist/infinitegrid.min.js',
+    buttonText: 'Load More'
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'shell练习--hexo添加front-matter',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2025-03-20 12:10:47'
+}</script><script>(win=>{
+      win.saveToLocal = {
+        set: (key, value, ttl) => {
+          if (ttl === 0) return
+          const now = Date.now()
+          const expiry = now + ttl * 86400000
+          const item = {
+            value,
+            expiry
+          }
+          localStorage.setItem(key, JSON.stringify(item))
+        },
+      
+        get: key => {
+          const itemStr = localStorage.getItem(key)
+      
+          if (!itemStr) {
+            return undefined
+          }
+          const item = JSON.parse(itemStr)
+          const now = Date.now()
+      
+          if (now > item.expiry) {
+            localStorage.removeItem(key)
+            return undefined
+          }
+          return item.value
+        }
+      }
+    
+      win.getScript = (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        script.onerror = reject
+        script.onload = script.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          script.onload = script.onreadystatechange = null
+          resolve()
+        }
+
+        Object.keys(attr).forEach(key => {
+          script.setAttribute(key, attr[key])
+        })
+
+        document.head.appendChild(script)
+      })
+    
+      win.getCSS = (url, id = false) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onerror = reject
+        link.onload = link.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          link.onload = link.onreadystatechange = null
+          resolve()
+        }
+        document.head.appendChild(link)
+      })
+    
+      win.activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+        if (t === 'dark') activateDarkMode()
+        else if (t === 'light') activateLightMode()
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+      const detectApple = () => {
+        if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+          document.documentElement.classList.add('apple')
+        }
+      }
+      detectApple()
+    })(window)</script><meta name="generator" content="Hexo 7.3.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://pic.imgdb.cn/item/66deb3ecd9c307b7e9dd4dd9.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">13</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">2</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">1</div></a></div><hr class="custom-hr"/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header"><nav id="nav"><span id="blog-info"><a href="/" title="memorygo's blog"><img class="site-icon" src="https://pic1.imgdb.cn/item/67cadec9066befcec6e06266.png"/><span class="site-name">memorygo's blog</span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">shell练习--hexo添加front-matter</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">Created</span><time class="post-meta-date-created" datetime="2025-03-20T04:05:37.000Z" title="Created 2025-03-20 12:05:37">2025-03-20</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">Updated</span><time class="post-meta-date-updated" datetime="2025-03-20T04:10:47.365Z" title="Updated 2025-03-20 12:10:47">2025-03-20</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E5%AD%A6%E4%B9%A0/">学习</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="shell练习--hexo添加front-matter"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">Post Views:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="shell脚本–hexo添加front-matter"><a href="#shell脚本–hexo添加front-matter" class="headerlink" title="shell脚本–hexo添加front-matter"></a>shell脚本–hexo添加front-matter</h1><p>本文旨在给已经写好的md文件添加hexo到front-matter，以便其能快速移植到hexo中。</p>
+<ul>
+<li>脚本名</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">add-fm</span><br></pre></td></tr></table></figure>
+
+<p>可自行更改名称</p>
+<ul>
+<li>使用</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">add-fm [filename] [option](可选) </span><br></pre></td></tr></table></figure>
+
+
+
+<p><code>option</code></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">-T,--title: 设置 文章名字</span><br><span class="line">-t,--tag: 设置 标签</span><br><span class="line">-c,--categories: 设置 分类</span><br><span class="line">-d,--date: 设置时间</span><br><span class="line">-f,--force: 设置强制覆盖		</span><br></pre></td></tr></table></figure>
+
+<p>除了<code>-f,--force</code>外，其他选项必须填参数。如<code>add-fm ansible-use.md -c 技术博客</code></p>
+<ul>
+<li>注意事项</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">1.脚本文件名，不能包含空格</span><br><span class="line">2.-t,-c可以配置多个参数，参数之间必须用,隔开</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<ul>
+<li>脚本架构及原理</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line">此脚本由两个函数和外部main处理组成</span><br><span class="line"></span><br><span class="line">1--</span><br><span class="line">外部定义关于文章名，标签，分类，日期，强制覆盖flag，</span><br><span class="line"></span><br><span class="line">2--</span><br><span class="line">简单解析了参数：</span><br><span class="line">-T --title 设置 文章名字</span><br><span class="line">-t --tag 设置 标签</span><br><span class="line">-c --categories 设置 分类</span><br><span class="line">-d --date设置时间</span><br><span class="line">-f --force 设置强制覆盖</span><br><span class="line">其它：当作目标文件的名字或通配符</span><br><span class="line"></span><br><span class="line">3--</span><br><span class="line">将通配符进行解析，过程：</span><br><span class="line">for args()</span><br><span class="line">	把 $arg[通配符的结果(多个)或文件(单个)] 放入数组a，此时数组a每个元素代表每个待处理的文件</span><br><span class="line">	若数组a为空，continue，输出：没有找到相关待处理文件</span><br><span class="line">	验证数组a中的每个文件，将普通文件移入数组b	（移除非普通玩家过程）</span><br><span class="line">	</span><br><span class="line">	</span><br><span class="line">4--生成front-matter函数</span><br><span class="line">	参数只有一个， 是要生成front-matter的文件。</span><br><span class="line">	默认生成file和date，按需生成tag和categories，其中file若无指定则采用文件名，date若无指定则采用当前运行脚本时间</span><br><span class="line">	</span><br><span class="line">5--添加front-matter函数</span><br><span class="line">	当文件不存在front-matter时，启动front-matter生成函数，生成后与原文件合并，添加成功。</span><br><span class="line">	当文件已经存在front-matter时（依靠grep查询文件中是否有^---$的行来判断），若非强制覆盖则直接return，不会生成front-matter。若强制覆盖，会删除原来的front-matter(用sed将---和---行之间的内容全部删除)后再生成合并。</span><br><span class="line">	</span><br><span class="line">6--主逻辑</span><br><span class="line">当数组b为空时，退出脚本，输出 没有找到相关文件</span><br><span class="line">不为空时，从数组b中依次取出文件，执行添加front-matter函数</span><br></pre></td></tr></table></figure>
+
+
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br></pre></td><td class="code"><pre><span class="line">#!/bin/bash</span><br><span class="line"></span><br><span class="line">#启动递归通配符，以及空模式处理（即当通配符匹配为空时，不会打印.*txt，而是直接输出空）,不区分大小写</span><br><span class="line">shopt -s globstar nullglob nocaseglob</span><br><span class="line"></span><br><span class="line">title=&quot;&quot;</span><br><span class="line">tags=&quot;&quot;</span><br><span class="line">categories=&quot;&quot;</span><br><span class="line">date=$(date &quot;+%Y-%m-%d %H:%M:%S&quot;)</span><br><span class="line">force_overwrite=false			#是否强制覆盖已有的front-matter</span><br><span class="line">files=()</span><br><span class="line">args=()		#存入文件名或通配符模式 的数组</span><br><span class="line"></span><br><span class="line">#简单解析参数，优势是不需要依赖</span><br><span class="line">	# 这里$#表示参数的个数</span><br><span class="line">while [[ &quot;$#&quot; -gt 0 ]]; do</span><br><span class="line">	case $1 in</span><br><span class="line">		-T|--title)</span><br><span class="line">			title=&quot;$2&quot;</span><br><span class="line">			shift 2</span><br><span class="line">			;;</span><br><span class="line">		-t|--tags)</span><br><span class="line">			tags=&quot;$2&quot;</span><br><span class="line">			shift 2</span><br><span class="line">			;;</span><br><span class="line">		-c|--categories)</span><br><span class="line">			categories=&quot;$2&quot;</span><br><span class="line">			shift 2</span><br><span class="line">			;;</span><br><span class="line">		-d|--date)</span><br><span class="line">			date=&quot;$2&quot;</span><br><span class="line">			shift 2</span><br><span class="line">			;;</span><br><span class="line">		-f|--force)</span><br><span class="line">			force_overwrite=true</span><br><span class="line">			shift</span><br><span class="line">			;;</span><br><span class="line">		*)		</span><br><span class="line">			args+=(&quot;$1&quot;)</span><br><span class="line">			shift</span><br><span class="line">			;;</span><br><span class="line">		esac</span><br><span class="line">	done</span><br><span class="line">	</span><br><span class="line">#处理通配符参数</span><br><span class="line">for arg in &quot;$&#123;args[@]&#125;&quot;; do</span><br><span class="line">	#声明一个数组变量，存放文件路径</span><br><span class="line">	declare -a expanded_files=()	</span><br><span class="line">	#将arg\0赋值给file同时将其放入expanded_files中</span><br><span class="line">	while IFS= read -r -d $&#x27;\0&#x27; file; do</span><br><span class="line">		expanded_files+=(&quot;$file&quot;)</span><br><span class="line">	done &lt; &lt;(printf &quot;%s\0&quot; $arg)</span><br><span class="line">	</span><br><span class="line">	#检查是否有匹配项</span><br><span class="line">	if [[ $&#123;#expanded_files[@]&#125; -eq 0 ]]; then </span><br><span class="line">		echo &quot;not found related file : $ arg&quot; &gt;&amp;2		#输出警告信息到标准错误，并跳出当前循环</span><br><span class="line">		continue</span><br><span class="line">	fi</span><br><span class="line">	</span><br><span class="line">	#验证并添加有效文件</span><br><span class="line">	for file in &quot;$&#123;expanded_files[@]&#125;&quot;; do</span><br><span class="line">		if [[ -f &quot;$file&quot; ]]; then</span><br><span class="line">			files+=(&quot;$file&quot;)</span><br><span class="line">		else</span><br><span class="line">			echo &quot;忽略非普通文件: $file&quot; &gt;&amp;2</span><br><span class="line">		fi</span><br><span class="line">	done</span><br><span class="line">done</span><br><span class="line"></span><br><span class="line"># 生成front-matter</span><br><span class="line">generate_front_matter()&#123;</span><br><span class="line">	local file=&quot;$1&quot;</span><br><span class="line">	local auto_title=&quot;$(basename &quot;$file&quot; .md)&quot;</span><br><span class="line">	</span><br><span class="line">	#如果未指定标题，则使用文件名作为标题</span><br><span class="line">	local front_matter_title=&quot;$&#123;title:-$auto_title&#125;&quot;</span><br><span class="line">	</span><br><span class="line">	#构建front-matter，默认一定有title和date</span><br><span class="line">	local front_matter=&quot;---\n&quot;</span><br><span class="line">	front_matter+=&quot;title: $front_matter_title\n&quot;</span><br><span class="line">	front_matter+=&quot;date: $date\n&quot;</span><br><span class="line">	</span><br><span class="line">	# -n 用于检查变量是否非空，当tags不为空时，则执行</span><br><span class="line">	if [[ -n &quot;$tags&quot; ]]; then</span><br><span class="line">		front_matter+=&quot;tags:\n&quot;</span><br><span class="line">			#IFS:内部隔断字符，方便后续分割</span><br><span class="line">		IFS=&#x27;,&#x27; read -r -a tag_array &lt;&lt;&lt; &quot;$tags&quot;</span><br><span class="line">			#将$tags的内容作为输入传递给read命令</span><br><span class="line">			#-r防止反斜杠被解释为转义</span><br><span class="line">			#-a将读取的内容存储为数组</span><br><span class="line">		for tag in &quot;$&#123;tag_array[@]&#125;&quot;; do		#遍历数组中每个元素</span><br><span class="line">			front_matter+=&quot; - $tag\n&quot;</span><br><span class="line">		done</span><br><span class="line">	fi</span><br><span class="line">	</span><br><span class="line">	if [[ -n &quot;$categories&quot; ]]; then</span><br><span class="line">    	front_matter+=&quot;categories:\n&quot;</span><br><span class="line">    	IFS=&#x27;,&#x27; read -r -a categories_array &lt;&lt;&lt; &quot;$categories&quot;</span><br><span class="line">    	for category in &quot;$&#123;categories_array[@]&#125;&quot;; do</span><br><span class="line">        	if [[ -n &quot;$category&quot; ]]; then</span><br><span class="line">            	front_matter+=&quot; - $category\n&quot;</span><br><span class="line">        	fi</span><br><span class="line">    	done</span><br><span class="line">	fi</span><br><span class="line">	</span><br><span class="line">	front_matter+=&quot;---\n&quot;</span><br><span class="line">	</span><br><span class="line">	echo -e &quot;$front_matter&quot;			#-e 表示进行转义字符处理</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">process_file()&#123;</span><br><span class="line">	local file=&quot;$1&quot;</span><br><span class="line">	local front_matter</span><br><span class="line">		</span><br><span class="line">		# -f 检查是否是一个普通文件</span><br><span class="line">#	if [[ ! -f &quot;$file&quot; ]]; then</span><br><span class="line">#		echo &quot;错误: 文件 $file 不存在&quot;</span><br><span class="line">#		return</span><br><span class="line">#	fi</span><br><span class="line">	</span><br><span class="line">	#检查文件是否已经有front-matter</span><br><span class="line">	if grep -q &#x27;^---$&#x27; &quot;$file&quot;; then</span><br><span class="line">		if [[ &quot;$force_overwrite&quot; == false ]];then</span><br><span class="line">			echo &quot;$file may already had front-matter ,can use -f to force cp&quot;</span><br><span class="line">			return</span><br><span class="line">		else</span><br><span class="line">		sed -i &#x27;/^---$/,/^---$/d&#x27; &quot;$file&quot;</span><br><span class="line">		fi</span><br><span class="line">	fi</span><br><span class="line">	</span><br><span class="line">	#生成front-matter</span><br><span class="line">	front_matter=$(generate_front_matter &quot;$file&quot;)</span><br><span class="line">	</span><br><span class="line"></span><br><span class="line">    </span><br><span class="line">    #将front-matter和file的内容合并，最后再写回原文件中。</span><br><span class="line">  #  echo -e &quot;$front_matter$(cat &quot;$file&quot;)&quot; &gt; &quot;$file&quot;</span><br><span class="line">  #  echo &quot;Front-matter has add in $file&quot;</span><br><span class="line"></span><br><span class="line">    front_matter=$(generate_front_matter &quot;$file&quot;)</span><br><span class="line">    &#123;</span><br><span class="line">        echo -e &quot;$front_matter&quot;</span><br><span class="line">        cat &quot;$file&quot;</span><br><span class="line">    &#125; &gt; &quot;$file.tmp&quot; &amp;&amp; mv &quot;$file.tmp&quot; &quot;$file&quot;</span><br><span class="line">    echo &quot;已添加 Front Matter 到: $file&quot;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"># main 逻辑</span><br><span class="line">	#  这里  #file[@] 表示 获取数组file的长度</span><br><span class="line">if  [[ $&#123;#files[@]&#125; -eq 0 ]]; then</span><br><span class="line">	echo &quot;error: not found file&quot;</span><br><span class="line">	exit 1</span><br><span class="line">fi</span><br><span class="line"></span><br><span class="line">for file in &quot;$&#123;files[@]&#125;&quot;; do</span><br><span class="line">	process_file &quot;$file&quot;</span><br><span class="line">done</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>Author: </span><span class="post-copyright-info"><a href="http://example.com">tzw</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>Link: </span><span class="post-copyright-info"><a href="http://example.com/2025/03/20/shell%E7%BB%83%E4%B9%A0--hexo%E6%B7%BB%E5%8A%A0front-matter/">http://example.com/2025/03/20/shell%E7%BB%83%E4%B9%A0--hexo%E6%B7%BB%E5%8A%A0front-matter/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>Copyright Notice: </span><span class="post-copyright-info">All articles in this blog are licensed under <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> unless stating additionally.</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/hexo/">hexo</a><a class="post-meta__tags" href="/tags/shell/">shell</a></div><div class="post_share"><div class="social-share" data-image="https://pic.imgdb.cn/item/66deb3ecd9c307b7e9dd4dd9.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="next-post pull-full"><a href="/2025/03/11/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84_T2--%E7%9F%A9%E9%98%B5%E7%9A%84%E5%8E%8B%E7%BC%A9%E5%AD%98%E5%82%A8/" title="数据结构_T2--矩阵的压缩存储"><div class="cover" style="background: var(--default-bg-color)"></div><div class="pagination-info"><div class="label">Next</div><div class="next_info">数据结构_T2--矩阵的压缩存储</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://pic.imgdb.cn/item/66deb3ecd9c307b7e9dd4dd9.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">tzw</div><div class="author-info__description">this is memorygo's house</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">13</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">2</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">1</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/memorygo" target="_blank" title="Github"><i class="fab fa-github" style="color: #24292e;"></i></a><a class="social-icon" href="mailto:xxxxxx@gmail.com" target="_blank" title="Email"><i class="fas fa-envelope" style="color: #4a7dbe;"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>Announcement</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>Contents</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#shell%E8%84%9A%E6%9C%AC%E2%80%93hexo%E6%B7%BB%E5%8A%A0front-matter"><span class="toc-number">1.</span> <span class="toc-text">shell脚本–hexo添加front-matter</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Post</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/03/20/shell%E7%BB%83%E4%B9%A0--hexo%E6%B7%BB%E5%8A%A0front-matter/" title="shell练习--hexo添加front-matter">shell练习--hexo添加front-matter</a><time datetime="2025-03-20T04:05:37.000Z" title="Created 2025-03-20 12:05:37">2025-03-20</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/03/11/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84_T2--%E7%9F%A9%E9%98%B5%E7%9A%84%E5%8E%8B%E7%BC%A9%E5%AD%98%E5%82%A8/" title="数据结构_T2--矩阵的压缩存储">数据结构_T2--矩阵的压缩存储</a><time datetime="2025-03-11T07:36:46.000Z" title="Created 2025-03-11 15:36:46">2025-03-11</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/03/11/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84_8--%E5%9B%BE/" title="数据结构_8--图">数据结构_8--图</a><time datetime="2025-03-11T07:36:45.000Z" title="Created 2025-03-11 15:36:45">2025-03-11</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/03/11/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84_9--%E6%9F%A5%E6%89%BE/" title="数据结构_9--查找">数据结构_9--查找</a><time datetime="2025-03-11T07:36:45.000Z" title="Created 2025-03-11 15:36:45">2025-03-11</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/03/11/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84_T1--%E5%BC%95%E5%AD%90/" title="数据结构_T1--引子">数据结构_T1--引子</a><time datetime="2025-03-11T07:36:45.000Z" title="Created 2025-03-11 15:36:45">2025-03-11</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2025 By tzw</div><div class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="Read Mode"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="Toggle Between Light And Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle between Single-column and Double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="Setting"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="Table Of Contents"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="Back To Top"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=4.13.0"></script><script src="/js/main.js?v=4.13.0"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.33/dist/fancybox/fancybox.umd.min.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
