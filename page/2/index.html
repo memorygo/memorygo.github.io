@@ -53,7 +53,7 @@
   isHome: true,
   isHighlightShrink: false,
   isToc: false,
-  postUpdate: '2025-03-20 12:18:48'
+  postUpdate: '2025-03-20 12:32:29'
 }</script><script>(win=>{
       win.saveToLocal = {
         set: (key, value, ttl) => {
@@ -150,72 +150,91 @@
         }
       }
       detectApple()
-    })(window)</script><meta name="generator" content="Hexo 7.3.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://pic.imgdb.cn/item/66deb3ecd9c307b7e9dd4dd9.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">13</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">2</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">1</div></a></div><hr class="custom-hr"/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div></div></div><div class="page" id="body-wrap"><header class="full_page" id="page-header" style="background-image: url('https://pic1.imgdb.cn/item/67cbea75066befcec6e1011a.png')"><nav id="nav"><span id="blog-info"><a href="/" title="memorygo's blog"><img class="site-icon" src="https://pic1.imgdb.cn/item/67cadec9066befcec6e06266.png"/><span class="site-name">memorygo's blog</span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="site-info"><h1 id="site-title">memorygo's blog</h1><div id="site_social_icons"><a class="social-icon" href="https://github.com/memorygo" target="_blank" title="Github"><i class="fab fa-github" style="color: #24292e;"></i></a><a class="social-icon" href="mailto:xxxxxx@gmail.com" target="_blank" title="Email"><i class="fas fa-envelope" style="color: #4a7dbe;"></i></a></div></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts" id="recent-posts"><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2025/03/11/ansible%E4%B8%8Edocker%E7%9A%84%E9%9B%86%E6%88%90%E8%87%AA%E5%8A%A8%E5%8C%96/" title="ansible与docker的集成自动化">ansible与docker的集成自动化</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2025-03-11T07:36:42.000Z" title="Created 2025-03-11 15:36:42">2025-03-11</time></span></div><div class="content">
-title: docker &amp; ansible combinedate: 2025&#x2F;3&#x2F;10 12:33:56tags:  - ansbile  - dockeransible与docker的集成自动化ansible和docker的集成ansible和docker的集成，可以帮助我们在一台主机上对一群服务器上的docker容器进行安装部署，从而达到高效率的运维环境
-什么是ansible?ansible是一款自动化运维工具，用于配置管理、应用部署和任务自动化。基于ssh协议，无需在目标机器安装客户端。ansible采用yml编写脚本。ansible编写的脚本叫做playbook，可以用来对目标机器进行自动化部署和配置任务。
-什么是docker？docker是一个开源的容器化平台，允许开发者将应用程序及其依赖项打包到一个轻量级、可移植的容器中,实现快速部署和跨环境运行。
-ansible部署docker集成的第一步，我们首先要编写playbook来给服务器群部署docker
-docker安装基于CentOs7
+    })(window)</script><meta name="generator" content="Hexo 7.3.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://pic.imgdb.cn/item/66deb3ecd9c307b7e9dd4dd9.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">13</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">5</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">2</div></a></div><hr class="custom-hr"/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div></div></div><div class="page" id="body-wrap"><header class="full_page" id="page-header" style="background-image: url('https://pic1.imgdb.cn/item/67cbea75066befcec6e1011a.png')"><nav id="nav"><span id="blog-info"><a href="/" title="memorygo's blog"><img class="site-icon" src="https://pic1.imgdb.cn/item/67cadec9066befcec6e06266.png"/><span class="site-name">memorygo's blog</span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="site-info"><h1 id="site-title">memorygo's blog</h1><div id="site_social_icons"><a class="social-icon" href="https://github.com/memorygo" target="_blank" title="Github"><i class="fab fa-github" style="color: #24292e;"></i></a><a class="social-icon" href="mailto:xxxxxx@gmail.com" target="_blank" title="Email"><i class="fas fa-envelope" style="color: #4a7dbe;"></i></a></div></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts" id="recent-posts"><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2025/03/20/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84_T1--%E5%BC%95%E5%AD%90/" title="数据结构_T1--引子">数据结构_T1--引子</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2025-03-20T04:30:24.000Z" title="Created 2025-03-20 12:30:24">2025-03-20</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E5%AD%A6%E4%B9%A0/">学习</a></span></div><div class="content">数据结构学什么
+如何用程序代码 把现实世界的问题信息化
+如何用计算机高效处理这些信息从而创造价值
 
-yum_aliyum_copy 更换国内yum源
- ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2025/03/11/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84_2--%E7%BA%BF%E6%80%A7%E8%A1%A8--%E9%A1%BA%E5%BA%8F%E8%A1%A8/" title="数据结构_2--线性表--顺序表">数据结构_2--线性表--顺序表</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2025-03-11T07:36:42.000Z" title="Created 2025-03-11 15:36:42">2025-03-11</time></span></div><div class="content">
-title: 数据结构_2–线性表–顺序表date: 2024&#x2F;12&#x2F;18 16:33:56线性表定义线性表是具有相同数据类型的n个数据元素的有限序列。
+一、 数据计算机专业人员，会用数据描述世界
+数据是信息的载体，是描述客观事物属性的数、字符及所有能输入到计算机中并被计算机程序识别和处理的符号的集合。数据是计算机程序加工的原料。
+1.1 数据元素数据元素是数据的基本单位，通常作为一个整体进行考虑和处理。
+1.2 数据项一个数据元素可由多个数据项组成，数据项是构成数据元素的不可分割单最小单位
+数据项可以再分的话，称之为组合项
 
-n为表长，当n&#x3D;0时线性表是一个空表。
-若用L命名线性表，一般表示为 $L &#x3D; (a1,a2,…,an)$
+一个账号是一个数据元素，账号的昵称，性别，生日等是数据项，其中生日由年月日组成，是组合项。
 
+1.3 数据对象数据对象是具有相同性质的数据元素的集合，是数据的一个子集。
 
-特点
-每个数据元素，类型相同，空间一样大
-数据元素之间，有次序。
-数据元素是 有限的。
+所有的qq账号就是一个数据对象
 
-基本操作常用操作
-InitList(&amp;L): 初始化表。 构造空的线性表L，分配内存空间。
-DestoryList(&amp;L): 销毁表。销毁线性表，并释放L所占的内存空间。
+1.4 数据结构数据结构是相互之间存在一种或多种特定关系的数据元素的集合
 
-表的从无到有，从有到无。
+同一个数据对象里的数据元素，可以组成不同的数据结构
+数据对象强调相同性质，数据结构强调关系
 
-ListInsert(&amp;L,i,e): 插入操作。在表L的第i个位置插入指定元素e。
+二、数据结构三要素数据结构三要素是 逻辑结构、数据运算、物理结构
+2.1 逻辑结构分为 集合、线性、树形、图状 结构
 
-**ListDelete(&amp;L,i,&amp;e):**删除操作。 删除表L中第i个位置的元素，并用e返回删除元素的值。
-
-LocateElem(L,e): 按值查找操作。在表L中查找具有给的关键字值的元素。
-
-GetElem(L,i): 按位查找操作。获取表L中第i个位置的元 ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2025/03/11/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84_10--%E6%8E%92%E5%BA%8F%E6%8A%80%E6%9C%AF/" title="数据结构_10--排序技术">数据结构_10--排序技术</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2025-03-11T07:36:42.000Z" title="Created 2025-03-11 15:36:42">2025-03-11</time></span></div><div class="content">
-title: 数据结构_10–排序技术date: 2024&#x2F;12&#x2F;18 16:33:56tags:  - 数据结构排序算法概念1sort,将关键字排成有序
-
-
-
-
-算法的稳定性
-
-12稳定：关键字相同的元素经过排序后相对顺序不会改变不稳定：相对位置改变
-
-稳定 不一定 比不稳定好，要看具体情况
-
-分类
-
-12345内部排序：数据都在内存中(时间空间复杂度)外部排序：数据太多，无法全部放入内存(时间空间复杂度，读写磁盘的次数)
-
-内存读写速度是硬盘的几百倍，所以不需要考虑内存的读写
-插入排序
-算法思想
-
-1每次将一个待排序的记录按其关键字大小插入到前面已排好序的子序列中，直到全部记录插入完成。
+集合：各个元素同属一个集 ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2025/03/20/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84_T2--%E7%9F%A9%E9%98%B5%E7%9A%84%E5%8E%8B%E7%BC%A9%E5%AD%98%E5%82%A8/" title="数据结构_T2--矩阵的压缩存储">数据结构_T2--矩阵的压缩存储</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2025-03-20T04:30:24.000Z" title="Created 2025-03-20 12:30:24">2025-03-20</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E5%AD%A6%E4%B9%A0/">学习</a></span></div><div class="content">矩阵的压缩存储引子二维数组可以采用列优先，行优先存储
+ 
+4*i+j
+2*j+i
+普通矩阵的存储可用二维数组存储
+特殊矩阵的存储对一些特殊的矩阵，可以压缩一部分存储空间
+对称矩阵的压缩存储对称矩阵：方阵，a ij &#x3D; a ji
+ 
+压缩存储策略：只存储主对角线+下三角区（或上三角）	行优先&#x2F;列优先
+ 
+重点：再通过“映射”函数，将矩阵的行号列号映射为对应数组下标 
+三角矩阵的压缩存储 
+压缩存储：最后一位存储 常量C ，其他与对称矩阵相同
+三对角矩阵的压缩存储三对角矩阵，又称带状矩阵
+ 
+压缩存储：值存储带状部分
+稀疏矩阵的压缩存储稀疏矩阵：非零元素远远少于矩阵元素的个数
+ 
+压缩存储策略：
+（1）顺序存储——三元组&lt;行，列，值&gt;
+ 
+1234567struct Node&#123;    int i;    int j;    int v;&#125;;struct Node data[100];
 
 
 
+（2）链式存储——十字链表法
+1234567typedef struct Node&#123;	int i; 	int j;    int v;    ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2025/03/20/shell%E7%BB%83%E4%B9%A0--hexo%E6%B7%BB%E5%8A%A0front-matter/" title="shell练习--hexo添加front-matter">shell练习--hexo添加front-matter</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2025-03-20T04:05:37.000Z" title="Created 2025-03-20 12:05:37">2025-03-20</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E5%AD%A6%E4%B9%A0/">学习</a></span></div><div class="content">shell脚本–hexo添加front-matter本文旨在给已经写好的md文件添加hexo到front-matter，以便其能快速移植到hexo中。
 
-代码实现
+脚本名
 
-12将比当前元素大的元素后移一位，当前元素插入到比它大的元素的前面(稳定)
+1add-fm
 
-12345678910111213141516171819202122232425//直接插入排序void InsertSort(int A[],int n)&#123;	int i,j,temp;	for(i=1;i&lt;n;i++)	//从头到尾逐个进行插入排序		if(A ...</div></div></div><nav id="pagination"><div class="pagination"><a class="extend prev" rel="prev" href="/"><i class="fas fa-chevron-left fa-fw"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://pic.imgdb.cn/item/66deb3ecd9c307b7e9dd4dd9.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">tzw</div><div class="author-info__description">this is memorygo's house</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">13</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">2</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">1</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/memorygo" target="_blank" title="Github"><i class="fab fa-github" style="color: #24292e;"></i></a><a class="social-icon" href="mailto:xxxxxx@gmail.com" target="_blank" title="Email"><i class="fas fa-envelope" style="color: #4a7dbe;"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>Announcement</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Post</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/03/20/shell%E7%BB%83%E4%B9%A0--hexo%E6%B7%BB%E5%8A%A0front-matter/" title="shell练习--hexo添加front-matter">shell练习--hexo添加front-matter</a><time datetime="2025-03-20T04:05:37.000Z" title="Created 2025-03-20 12:05:37">2025-03-20</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/03/11/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84_T2--%E7%9F%A9%E9%98%B5%E7%9A%84%E5%8E%8B%E7%BC%A9%E5%AD%98%E5%82%A8/" title="数据结构_T2--矩阵的压缩存储">数据结构_T2--矩阵的压缩存储</a><time datetime="2025-03-11T07:36:46.000Z" title="Created 2025-03-11 15:36:46">2025-03-11</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/03/11/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84_8--%E5%9B%BE/" title="数据结构_8--图">数据结构_8--图</a><time datetime="2025-03-11T07:36:45.000Z" title="Created 2025-03-11 15:36:45">2025-03-11</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/03/11/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84_9--%E6%9F%A5%E6%89%BE/" title="数据结构_9--查找">数据结构_9--查找</a><time datetime="2025-03-11T07:36:45.000Z" title="Created 2025-03-11 15:36:45">2025-03-11</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/03/11/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84_T1--%E5%BC%95%E5%AD%90/" title="数据结构_T1--引子">数据结构_T1--引子</a><time datetime="2025-03-11T07:36:45.000Z" title="Created 2025-03-11 15:36:45">2025-03-11</time></div></div></div></div><div class="card-widget card-categories"><div class="item-headline">
+可自行更改名称
+
+使用
+
+1add-fm [filename] [option](可选) 
+
+
+
+option
+12345-T,--title: 设置 文章名字-t,--tag: 设置 标签-c,--categories: 设置 分类-d,--date: 设置时间-f,--force: 设置强制覆盖		
+
+除了-f,--force外，其他选项必须填参数。如add-fm ansible-use.md -c 技术博客
+
+注意事项
+
+121.脚本文件名，不能包含空格2.-t,-c可以配置多个参数，参数之间必须用,隔开
+
+
+
+
+
+
+脚本架构及原理
+
+123456789101112131415161718192021222324252627282930313233此脚本由两个函数和外部main处理组成1--外部定义关于文章名，标签，分类，日期，强制覆盖flag，2--简单解析了参数：-T --title 设置 文章名 ...</div></div></div><nav id="pagination"><div class="pagination"><a class="extend prev" rel="prev" href="/"><i class="fas fa-chevron-left fa-fw"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://pic.imgdb.cn/item/66deb3ecd9c307b7e9dd4dd9.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">tzw</div><div class="author-info__description">this is memorygo's house</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">13</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">5</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">2</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/memorygo" target="_blank" title="Github"><i class="fab fa-github" style="color: #24292e;"></i></a><a class="social-icon" href="mailto:xxxxxx@gmail.com" target="_blank" title="Email"><i class="fas fa-envelope" style="color: #4a7dbe;"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>Announcement</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Post</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/03/20/ansible%E4%B8%8Edocker%E7%9A%84%E9%9B%86%E6%88%90%E8%87%AA%E5%8A%A8%E5%8C%96/" title="ansible与docker的集成自动化">ansible与docker的集成自动化</a><time datetime="2025-03-20T04:31:50.000Z" title="Created 2025-03-20 12:31:50">2025-03-20</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/03/20/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84_10--%E6%8E%92%E5%BA%8F%E6%8A%80%E6%9C%AF/" title="数据结构_10--排序技术">数据结构_10--排序技术</a><time datetime="2025-03-20T04:30:24.000Z" title="Created 2025-03-20 12:30:24">2025-03-20</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/03/20/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84_2--%E7%BA%BF%E6%80%A7%E8%A1%A8--%E9%A1%BA%E5%BA%8F%E8%A1%A8/" title="数据结构_2--线性表--顺序表">数据结构_2--线性表--顺序表</a><time datetime="2025-03-20T04:30:24.000Z" title="Created 2025-03-20 12:30:24">2025-03-20</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/03/20/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84_3--%E7%BA%BF%E6%80%A7%E8%A1%A8--%E9%93%BE%E8%A1%A8/" title="数据结构_3--线性表--链表">数据结构_3--线性表--链表</a><time datetime="2025-03-20T04:30:24.000Z" title="Created 2025-03-20 12:30:24">2025-03-20</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/03/20/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84_4--%E6%A0%88/" title="数据结构_4--栈">数据结构_4--栈</a><time datetime="2025-03-20T04:30:24.000Z" title="Created 2025-03-20 12:30:24">2025-03-20</time></div></div></div></div><div class="card-widget card-categories"><div class="item-headline">
             <i class="fas fa-folder-open"></i>
             <span>Categories</span>
             
             </div>
             <ul class="card-category-list" id="aside-cat-list">
-            <li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E5%AD%A6%E4%B9%A0/"><span class="card-category-list-name">学习</span><span class="card-category-list-count">1</span></a></li>
-            </ul></div><div class="card-widget card-tags"><div class="item-headline"><i class="fas fa-tags"></i><span>Tags</span></div><div class="card-tag-cloud"><a href="/tags/hexo/" style="font-size: 1.1em; color: #999">hexo</a> <a href="/tags/shell/" style="font-size: 1.1em; color: #999">shell</a></div></div><div class="card-widget card-archives"><div class="item-headline"><i class="fas fa-archive"></i><span>Archives</span></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2025/03/"><span class="card-archive-list-date">March 2025</span><span class="card-archive-list-count">13</span></a></li></ul></div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>Info</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">Article :</div><div class="item-count">13</div></div><div class="webinfo-item"><div class="item-name">UV :</div><div class="item-count" id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">PV :</div><div class="item-count" id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">Last Update :</div><div class="item-count" id="last-push-date" data-lastPushDate="2025-03-20T04:18:48.284Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2025 By tzw</div><div class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="Toggle Between Light And Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle between Single-column and Double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="Setting"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="Back To Top"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=4.13.0"></script><script src="/js/main.js?v=4.13.0"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.33/dist/fancybox/fancybox.umd.min.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
+            <li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E5%AD%A6%E4%B9%A0/"><span class="card-category-list-name">学习</span><span class="card-category-list-count">12</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E6%8A%80%E6%9C%AF/"><span class="card-category-list-name">技术</span><span class="card-category-list-count">1</span></a></li>
+            </ul></div><div class="card-widget card-tags"><div class="item-headline"><i class="fas fa-tags"></i><span>Tags</span></div><div class="card-tag-cloud"><a href="/tags/docker/" style="font-size: 1.1em; color: #999">docker</a> <a href="/tags/shell/" style="font-size: 1.1em; color: #999">shell</a> <a href="/tags/hexo/" style="font-size: 1.1em; color: #999">hexo</a> <a href="/tags/ansible/" style="font-size: 1.1em; color: #999">ansible</a> <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" style="font-size: 1.5em; color: #99a9bf">数据结构</a></div></div><div class="card-widget card-archives"><div class="item-headline"><i class="fas fa-archive"></i><span>Archives</span></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2025/03/"><span class="card-archive-list-date">March 2025</span><span class="card-archive-list-count">13</span></a></li></ul></div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>Info</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">Article :</div><div class="item-count">13</div></div><div class="webinfo-item"><div class="item-name">UV :</div><div class="item-count" id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">PV :</div><div class="item-count" id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">Last Update :</div><div class="item-count" id="last-push-date" data-lastPushDate="2025-03-20T04:32:29.476Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2025 By tzw</div><div class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="Toggle Between Light And Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle between Single-column and Double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="Setting"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="Back To Top"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=4.13.0"></script><script src="/js/main.js?v=4.13.0"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.33/dist/fancybox/fancybox.umd.min.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
